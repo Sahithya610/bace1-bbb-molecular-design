@@ -1,0 +1,30 @@
+=== DOCKING COUNT RECONCILIATION SUMMARY ===
+
+Distinct molecules submitted (pose files 001-050):  50
+Pose files that exist on disk:                       50/50
+Pose files that are non-empty / have MODEL+ENDMDL:  50/50
+Pose files that are physically present but empty:   0
+Pose files with a parsed Vina score:                50/50
+CSV vina_score values populated:                    50/50
+Score matches (raw == CSV, tol<1e-6):               50/50
+Score mismatches:                                   0
+
+Authoritative best Vina score (from raw .pdbqt):   -9.888 kcal/mol
+Best Vina score as recorded in CSV:                 -9.888 kcal/mol
+
+EXPLANATION FOR PREVIOUS '37 DOCKED' DISCREPANCY
+-------------------------------------------------
+All 50 pose files exist and contain valid MODEL/ENDMDL blocks.
+The '37 docked successfully' figure was inconsistent with the actual
+file set. Every pose file contains atom records and a parsed Vina score.
+The most likely source of the discrepancy is that an intermediate
+summary was generated from an earlier, partial docking run (37 poses)
+before the remaining 13 were produced, and was never updated.
+The bace1_final_ranked.csv is therefore consistent with all 50 poses.
+
+NOTE ON SCORE PRECISION:
+  Raw file best score: -9.888 kcal/mol  (full precision as written by Vina)
+  CSV file best score: -9.888 kcal/mol
+  If these differ, the CSV should be treated as rounded.
+
+Output CSV: C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\reports\audit_corrections\docking_reconciliation.csv

@@ -1,0 +1,7 @@
+candidate_id,pIC50,logBB,passes_joint,passes_pIC50_only,passes_BBB_only,Vina_score,QED,Ro5_violations,PAINS,Brenk,max_training_Tc,exact_duplicate,novelty_class,logBB_vs_threshold_RMSE_units,priority_rank,priority_justification
+3,7.749419324366976,-0.0324063616392542,False,True,False,NA,0.865,0,none,none,0.8461538461538461,False,NOVEL,0.0521,1,"Novel, clean (no PAINS/Brenk), highest QED"
+5,7.739979797285784,-0.2241945263187247,False,True,False,NA,0.777,0,none,none,0.7014925373134329,False,NOVEL,0.3607,2,"Novel, clean (no PAINS/Brenk), distinct scaffold"
+1,7.903693442264296,-0.0201572131713451,False,True,False,NA,0.693,0,none,none,1.0,False,NEAR_DUP,0.0324,3,Near-duplicate (Tc>=0.9) but clean
+2,7.736254415638158,-0.3160885625713954,False,True,False,NA,0.246,2,none,2-halo_pyridine; het-C-het_not_in_ring,0.7528,False,NOVEL,0.5086,4,Exact duplicate or Brenk alert
+4,7.712914812405698,-0.4340336465815689,False,True,False,NA,0.231,2,none,het-C-het_not_in_ring,0.8235,False,NOVEL,0.6984,4,Exact duplicate or Brenk alert
+6,7.921029398946613,-0.0141539513778256,False,True,False,NA,0.618,0,none,2-halo_pyridine,1.0,False,NEAR_DUP,0.0228,4,Exact duplicate or Brenk alert

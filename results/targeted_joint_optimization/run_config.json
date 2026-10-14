@@ -1,0 +1,18 @@
+{
+  "experiment": "Targeted_Joint_Optimization_Pilot",
+  "objective": "Identify valid, sufficiently novel candidate molecules satisfying BOTH independent BACE1 oracle pIC50 >= 7.6576 AND BBB model logBB >= 0.0 using bounded molecular optimization on verified candidate parents.",
+  "bace1_oracle_model": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\bace1_activity_model\\bace1_activity_model.joblib",
+  "bace1_oracle_test_R2": 0.6156,
+  "bace1_oracle_test_RMSE": 0.7553,
+  "bbb_model": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\bbb_activity_model\\bbb_model.joblib",
+  "bbb_model_test_R2": 0.3538,
+  "bbb_model_test_RMSE": 0.6215,
+  "thresholds": {
+    "pIC50": 7.6576,
+    "logBB": 0.0
+  },
+  "parent_library_size": 12,
+  "analogue_pilot_limit": 500,
+  "total_unique_valid_analogues_generated": 150,
+  "timestamp": "2026-10-14T10:19:46"
+}

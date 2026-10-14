@@ -1,0 +1,30 @@
+{
+  "experiment": "Issue5-JointPositiveDisc-Pilot",
+  "hypothesis": "Discriminator trained exclusively on joint-positive BACE1 molecules (pIC50>=7.6576 AND logBB>=0.0) will guide the generator toward the joint-property distribution without explicit continuous conditioning",
+  "bbb_label_warning": "predicted_logBB values are B3DB ExtraTrees model predictions (test R2=0.354), NOT experimental BBB permeability measurements",
+  "approach": "Option A: zero condition vector passed to ConditionalGenerator, lambda_condition=0.0",
+  "changes_from_baseline": [
+    "drug_raw_file replaced with bace1_joint_positive_train.smi",
+    "condition = torch.zeros(batch_size, 3) passed to generator",
+    "lambda_condition set to 0.0 (no condition consistency loss)"
+  ],
+  "unchanged": [
+    "WGAN-GP",
+    "architecture",
+    "auxiliary property head (monitoring only)",
+    "critic convention",
+    "ChEMBL general input to generator"
+  ],
+  "warm_start_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "warm_start_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "bace1_smi_for_vocab": "druggen_data/bace1.smi",
+  "joint_positive_train_smi": "druggen_data/bace1_joint_positive_train.smi",
+  "batch_size": 32,
+  "max_steps": 500,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 0.0,
+  "seed": 1
+}

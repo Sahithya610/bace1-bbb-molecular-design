@@ -1,0 +1,36 @@
+{
+  "target": "pIC50",
+  "pIC50_definition": "9 - log10(IC50[nM])",
+  "fingerprint": {
+    "type": "Morgan",
+    "radius": 2,
+    "n_bits": 2048
+  },
+  "random_state": 42,
+  "unique_molecules": 8271,
+  "unique_scaffolds": 2925,
+  "train_samples": 5789,
+  "validation_samples": 1242,
+  "test_samples": 1240,
+  "train_scaffolds": 2082,
+  "validation_scaffolds": 404,
+  "test_scaffolds": 439,
+  "validation_results": {
+    "RandomForest": {
+      "MAE": 0.6354124204047683,
+      "RMSE": 0.8175989619059756,
+      "R2": 0.6003910404400864
+    },
+    "ExtraTrees": {
+      "MAE": 0.6171674879545884,
+      "RMSE": 0.7991390699703219,
+      "R2": 0.6182322117452905
+    }
+  },
+  "selected_model": "ExtraTrees",
+  "test_results": {
+    "MAE": 0.5879442585742135,
+    "RMSE": 0.7553398502362197,
+    "R2": 0.6156080678355416
+  }
+}

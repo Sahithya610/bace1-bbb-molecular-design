@@ -1,0 +1,291 @@
+parent_id,transformation_category,transformation_description,error_stage,exclusion_reason
+PARENT_A1,Bioisostere_TPSA_Reduction,"Pyrimidine -> 4-pyridyl bioisostere (-13 A^2 TPSA, -1 HBA)",deduplication,Duplicate analogue already generated
+PARENT_A1,Bioisostere_TPSA_Reduction,"Pyrimidine -> 3-pyridyl bioisostere (-13 A^2 TPSA, -1 HBA)",deduplication,Duplicate analogue already generated
+PARENT_A1,Bioisostere_TPSA_Reduction,"Pyrimidine -> phenyl bioisostere (-26 A^2 TPSA, -2 HBA)",deduplication,Duplicate analogue already generated
+PARENT_A1,Bioisostere_TPSA_Reduction,Pyrimidine -> 4-fluorophenyl bioisostere (lipophilic + polar surface reduction),deduplication,Duplicate analogue already generated
+PARENT_A1,Bioisostere_TPSA_Reduction,Pyrimidine -> 3-fluorophenyl bioisostere,deduplication,Duplicate analogue already generated
+PARENT_A1,Bioisostere_TPSA_Reduction,"Pyrimidine -> 3,5-difluorophenyl bioisostere (classical BACE1 S3 motif)",deduplication,Duplicate analogue already generated
+PARENT_A1,Bioisostere_TPSA_Reduction,Pyrimidine -> 2-fluoropyridin-4-yl bioisostere,deduplication,Duplicate analogue already generated
+PARENT_A1,Halogen_Scan,Aromatic C-H -> C-F mono-fluorination (site 6),deduplication,Duplicate analogue already generated
+PARENT_A3,Bioisostere_TPSA_Reduction,"Pyrimidine -> 4-pyridyl bioisostere (-13 A^2 TPSA, -1 HBA)",deduplication,Duplicate analogue already generated
+PARENT_A3,Bioisostere_TPSA_Reduction,"Pyrimidine -> 3-pyridyl bioisostere (-13 A^2 TPSA, -1 HBA)",deduplication,Duplicate analogue already generated
+PARENT_A3,Bioisostere_TPSA_Reduction,"Pyrimidine -> phenyl bioisostere (-26 A^2 TPSA, -2 HBA)",deduplication,Duplicate analogue already generated
+PARENT_A3,Bioisostere_TPSA_Reduction,Pyrimidine -> 4-fluorophenyl bioisostere (lipophilic + polar surface reduction),deduplication,Duplicate analogue already generated
+PARENT_A3,Bioisostere_TPSA_Reduction,Pyrimidine -> 3-fluorophenyl bioisostere,deduplication,Duplicate analogue already generated
+PARENT_A3,Bioisostere_TPSA_Reduction,"Pyrimidine -> 3,5-difluorophenyl bioisostere (classical BACE1 S3 motif)",deduplication,Duplicate analogue already generated
+PARENT_A3,Bioisostere_TPSA_Reduction,Pyrimidine -> 2-fluoropyridin-4-yl bioisostere,deduplication,Duplicate analogue already generated
+PARENT_A3,Alkyl_Chain_Tuning,Ethyl -> Cyclopropyl (rigid lipophilic bioisostere),heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A3,Alkyl_Chain_Tuning,Ethyl -> Isopropyl,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A3,Alkyl_Chain_Tuning,Ethyl -> Trifluoromethyl,heavy_atom_filter,Heavy atom count out of bounds: 4
+PARENT_A3,Alkyl_Chain_Tuning,"Ethyl -> 2,2,2-trifluoroethyl",heavy_atom_filter,Heavy atom count out of bounds: 5
+PARENT_A3,Alkyl_Chain_Tuning,Ethyl -> 2-fluoroethyl,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A3,Halogen_Scan,Aromatic C-H -> C-F mono-fluorination (site 5),deduplication,Duplicate analogue already generated
+PARENT_A4,Alkyl_Chain_Tuning,Ethyl -> Cyclopropyl (rigid lipophilic bioisostere),heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A4,Alkyl_Chain_Tuning,Ethyl -> Isopropyl,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A4,Alkyl_Chain_Tuning,Ethyl -> Trifluoromethyl,heavy_atom_filter,Heavy atom count out of bounds: 4
+PARENT_A4,Alkyl_Chain_Tuning,"Ethyl -> 2,2,2-trifluoroethyl",heavy_atom_filter,Heavy atom count out of bounds: 5
+PARENT_A4,Alkyl_Chain_Tuning,Ethyl -> 2-fluoroethyl,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A5,Alkyl_Chain_Tuning,Ethyl -> Cyclopropyl (rigid lipophilic bioisostere),heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A5,Alkyl_Chain_Tuning,Ethyl -> Isopropyl,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_A5,Alkyl_Chain_Tuning,Ethyl -> Trifluoromethyl,heavy_atom_filter,Heavy atom count out of bounds: 4
+PARENT_A5,Alkyl_Chain_Tuning,"Ethyl -> 2,2,2-trifluoroethyl",heavy_atom_filter,Heavy atom count out of bounds: 5
+PARENT_A5,Alkyl_Chain_Tuning,Ethyl -> 2-fluoroethyl,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 3,5-difluorophenyl (classical BACE1 S1/S3 binder)",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 3,5-difluorophenyl (classical BACE1 S1/S3 binder)",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 3,5-difluorophenyl (classical BACE1 S1/S3 binder)",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-fluorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-fluorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-fluorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 3,4-difluorophenyl",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 3,4-difluorophenyl",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 3,4-difluorophenyl",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 2,5-difluorophenyl",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 2,5-difluorophenyl",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Cyclopropylethyl -> 2,5-difluorophenyl",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 5-pyrimidinyl (as in Candidate A3),deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 5-pyrimidinyl (as in Candidate A3),deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 5-pyrimidinyl (as in Candidate A3),deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 4-pyridyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 4-pyridyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 4-pyridyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 2-fluoropyridin-4-yl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 2-fluoropyridin-4-yl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 2-fluoropyridin-4-yl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-chlorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-chlorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-chlorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-chloro-5-fluorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-chloro-5-fluorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-chloro-5-fluorophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-cyanophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-cyanophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-cyanophenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(aminomethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(aminomethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopropylethyl -> 3-(aminomethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Flexible 3,5-difluorophenethyl isostere",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Flexible 3,5-difluorophenethyl isostere",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,"P1/P3 Pocket: Flexible 3,5-difluorophenethyl isostere",deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Flexible 3-fluorophenethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Flexible 3-fluorophenethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Flexible 3-fluorophenethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopentylmethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopentylmethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclopentylmethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclohexylmethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclohexylmethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,BACE1_Pocket_Pharmacophore,P1/P3 Pocket: Cyclohexylmethyl isostere,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B1,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Aminothiazine_S1_Optimization,"Difluorophenyl -> 3,5-difluorophenyl (BACE1 S1 preference)",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Aminothiazine_S1_Optimization,"Difluorophenyl -> 3,5-difluorophenyl (BACE1 S1 preference)",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Aminothiazine_S1_Optimization,"2,4-difluorophenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Aminothiazine_S1_Optimization,"2,4-difluorophenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Aminothiazine_S1_Optimization,Difluorophenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Aminothiazine_S1_Optimization,Difluorophenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Aminothiazine_S1_Optimization,"2,4-difluorophenyl -> 3-fluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Aminothiazine_S1_Optimization,"2,4-difluorophenyl -> 3-fluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Aminothiazine_S1_Optimization,Difluorophenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B2,Aminothiazine_S1_Optimization,Difluorophenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B2,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B2,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Isoxazoline_Tuning,"Fluorobenzylamine -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B4,Isoxazoline_Tuning,Fluorobenzylamine -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Isoxazoline_Tuning,"Fluorobenzylamine -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Isoxazoline_Tuning,Fluorobenzylamine -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Piperidine (increases logBB and lipophilicity),heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Piperidine (increases logBB and lipophilicity),heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> N-methylpiperazine,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> N-methylpiperazine,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_B5,Morpholine_Bioisostere,"Morpholine -> Thiomorpholine-1,1-dioxide",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Morpholine_Bioisostere,"Morpholine -> Thiomorpholine-1,1-dioxide",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Fluorine replacement,heavy_atom_filter,Heavy atom count out of bounds: 1
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Fluorine replacement,heavy_atom_filter,Heavy atom count out of bounds: 1
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Cyclopropyl replacement,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Cyclopropyl replacement,heavy_atom_filter,Heavy atom count out of bounds: 3
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Trifluoromethoxy replacement,heavy_atom_filter,Heavy atom count out of bounds: 5
+PARENT_B5,Morpholine_Bioisostere,Morpholine -> Trifluoromethoxy replacement,heavy_atom_filter,Heavy atom count out of bounds: 5
+PARENT_C3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_C3,Biaryl_Pharmacophore_Tuning,"3-(aminomethyl)phenyl -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-fluorophenyl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethyl)phenyl,deduplication,Duplicate analogue already generated
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-(trifluoromethoxy)phenyl,deduplication,Duplicate analogue already generated
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 2-fluoropyridin-4-yl,heavy_atom_filter,Heavy atom count out of bounds: 7
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_C3,Biaryl_Pharmacophore_Tuning,3-(aminomethyl)phenyl -> 3-cyanophenyl,heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_C3,Isoxazoline_Tuning,"Fluorobenzylamine -> 3,5-difluorophenyl",heavy_atom_filter,Heavy atom count out of bounds: 8
+PARENT_C3,Isoxazoline_Tuning,Fluorobenzylamine -> 5-pyrimidinyl,heavy_atom_filter,Heavy atom count out of bounds: 6

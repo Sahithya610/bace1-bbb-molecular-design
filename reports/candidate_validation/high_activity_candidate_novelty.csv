@@ -1,0 +1,7 @@
+candidate_id,canonical_isomeric_smiles,max_training_Tc,is_exact_isomeric_duplicate,nearest_training_isomeric_smiles,scaffold_in_training,notes
+1,CC(C)(C)COc1cnc2c(c1)C1(COC(N)=N1)c1cc(-c3cncnc3)ccc1O2,1.0,False,CC(C)(C)COc1cnc2c(c1)[C@]1(COC(N)=N1)c1cc(-c3cncnc3)ccc1O2,True,Very high structural similarity (Tc>=0.9) but not exact isomeric match.
+2,COc1cnc(C(O)Nc2ccc3c(c2)C2(CCSC(N)=N2)c2cc(-c4ccnc(F)c4)nc(F)c2O3)cn1,0.7528,False,COc1cnc(C(=O)Nc2ccc3c(c2)C2(CCSC(N)=N2)c2cc(-c4ccnc(F)c4)nc(F)c2O3)cn1,,Moderate-high similarity (0.7<=Tc<0.9); structurally analogous to training set.
+3,CCC1CC2(CCC1OC)Cc1ccc(-c3cncnc3)cc1C21COC(N)=N1,0.8461538461538461,False,[2H]C1([2H])OC(N)=N[C@]12c1cc(-c3cncnc3)ccc1C[C@@]21CC[C@H](OC)[C@@H](CC)C1,True,Moderate-high similarity (0.7<=Tc<0.9); structurally analogous to training set.
+4,CCC(O)NC(Cc1cccc(-c2nccs2)c1)C(O)CNC1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21,0.8235,False,CCC(=O)N[C@@H](Cc1cccc(-c2nccs2)c1)[C@H](O)CN[C@H]1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21,,Moderate-high similarity (0.7<=Tc<0.9); structurally analogous to training set.
+5,CCCc1cc(-c2ccc3c(c2)C2(N=C(C)C(N)=N2)C2(CCC(OC)CC2)C3)ccn1,0.7014925373134329,False,CC#Cc1cc(-c2ccc3c(c2)C2(N=C(C)C(N)=N2)[C@]2(CC[C@H](OC)CC2)C3)ccn1,True,Moderate-high similarity (0.7<=Tc<0.9); structurally analogous to training set.
+6,NC1=NC2(CO1)c1cc(-c3cccnc3F)ccc1Oc1cnc(C3CCCOC3)cc12,1.0,False,NC1=N[C@@]2(CO1)c1cc(-c3cccnc3F)ccc1Oc1cnc(C3CCCOC3)cc12,True,Very high structural similarity (Tc>=0.9) but not exact isomeric match.

@@ -1,0 +1,3 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,condition_mode,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+377,3,121,F,True,6,0,BACE1,zero,7.0,0.0,experiments\models\Issue5-JointPositive-Checkpointed\generator_step_350.pt,42,F,4.757241985823422,0.26921474232868825,0.46178435509382787
+597,5,85,N,True,7,0,BACE1,zero,7.0,0.0,experiments\models\Issue5-JointPositive-Checkpointed\generator_step_350.pt,42,N,4.763295448468694,0.27354474228877795,0.4675452218582693

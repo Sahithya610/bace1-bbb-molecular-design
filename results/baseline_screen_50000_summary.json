@@ -1,0 +1,122 @@
+{
+  "experiment": "baseline_screen_50000",
+  "generation": {
+    "total_graphs": 50048,
+    "n_valid": 35874,
+    "validity_fraction": 0.716792,
+    "n_evaluated_unique": 35042,
+    "n_deduped_out": 832,
+    "uniqueness_fraction_of_valid": 0.976808
+  },
+  "oracle_statistics": {
+    "mean_pic50": 5.4785,
+    "median_pic50": 5.4692,
+    "std_pic50": 0.2735,
+    "min_pic50": 4.3293,
+    "max_pic50": 7.921,
+    "mean_logBB": 0.0746,
+    "median_logBB": 0.073,
+    "std_logBB": 0.2042,
+    "min_logBB": -1.0527,
+    "max_logBB": 1.0343
+  },
+  "threshold_counts": {
+    "n_pic50_ge60": 1073,
+    "n_pic50_ge70": 17,
+    "n_pic50_ge76576": 6,
+    "n_logBB_ge0": 22282,
+    "n_both_thresholds": 0,
+    "rate_pic50_ge60": 0.03062,
+    "rate_pic50_ge70": 0.000485,
+    "rate_pic50_ge76576": 0.000171,
+    "rate_logBB_ge0": 0.635866,
+    "rate_both": 0.0
+  },
+  "top_10_by_pic50": [
+    {
+      "canonical_smiles": "NC1=NC2(CO1)c1cc(-c3cccnc3F)ccc1Oc1cnc(C3CCCOC3)cc12",
+      "predicted_pIC50": 7.921029398946613,
+      "predicted_logBB": -0.0141539513778256
+    },
+    {
+      "canonical_smiles": "CC(C)(C)COc1cnc2c(c1)C1(COC(N)=N1)c1cc(-c3cncnc3)ccc1O2",
+      "predicted_pIC50": 7.903693442264296,
+      "predicted_logBB": -0.0201572131713451
+    },
+    {
+      "canonical_smiles": "CCC1CC2(CCC1OC)Cc1ccc(-c3cncnc3)cc1C21COC(N)=N1",
+      "predicted_pIC50": 7.749419324366976,
+      "predicted_logBB": -0.0324063616392542
+    },
+    {
+      "canonical_smiles": "CCCc1cc(-c2ccc3c(c2)C2(N=C(C)C(N)=N2)C2(CCC(OC)CC2)C3)ccn1",
+      "predicted_pIC50": 7.739979797285784,
+      "predicted_logBB": -0.2241945263187247
+    },
+    {
+      "canonical_smiles": "COc1cnc(C(O)Nc2ccc3c(c2)C2(CCSC(N)=N2)c2cc(-c4ccnc(F)c4)nc(F)c2O3)cn1",
+      "predicted_pIC50": 7.736254415638158,
+      "predicted_logBB": -0.3160885625713954
+    },
+    {
+      "canonical_smiles": "CCC(O)NC(Cc1cccc(-c2nccs2)c1)C(O)CNC1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21",
+      "predicted_pIC50": 7.712914812405698,
+      "predicted_logBB": -0.4340336465815689
+    },
+    {
+      "canonical_smiles": "CN1OC2(N=C1N)c1cc(CCC3CC3)ccc1CC21CCC(OC(F)F)CC1",
+      "predicted_pIC50": 7.552852316972642,
+      "predicted_logBB": -0.0218263024739037
+    },
+    {
+      "canonical_smiles": "COC1CCC2(CC1)Cc1ccc(CCC3CC3)cc1C21N=C(N)c2ccccc21",
+      "predicted_pIC50": 7.536869852609823,
+      "predicted_logBB": 0.1095003674192835
+    },
+    {
+      "canonical_smiles": "NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(F)c(F)c3)CC2CS1",
+      "predicted_pIC50": 7.402409136526503,
+      "predicted_logBB": 0.0352617464645568
+    },
+    {
+      "canonical_smiles": "COC1CCC2(CC1)Cc1ccc(-c3cccc(CN)c3)cc1C21N=C(N)c2ccccc21",
+      "predicted_pIC50": 7.391617983499457,
+      "predicted_logBB": 0.0732944099556941
+    }
+  ],
+  "scaleup_projection_illustrative": {
+    "denominator_500k": 350084,
+    "projected_pic50_ge60": 10720,
+    "projected_pic50_ge70": 170,
+    "warning": "Statistical extrapolation only. Not a guarantee. Joint-pass yield cannot be reliably inferred from marginal rates alone."
+  },
+  "comparison_16k": {
+    "graphs_generated_16k": 16384,
+    "valid_16k": 11668,
+    "validity_fraction_16k": 0.712158203125,
+    "unique_evaluated_16k": 11376,
+    "n_pic50_ge60_16k": 318,
+    "n_pic50_ge70_16k": 5,
+    "n_pic50_ge76576_16k": 3,
+    "max_pic50_16k": 7.903693442264297,
+    "n_logBB_ge0_16k": 7701,
+    "n_both_16k": 0,
+    "rate_pic50_ge60_16k": 0.027953586497890294
+  },
+  "scaleup_decision": {
+    "criteria": {
+      "validity_ge_050": true,
+      "n_evaluated_ge_25000": true,
+      "rate_pic50_ge60_gt_0": true,
+      "no_atom_collapse": true
+    },
+    "recommend_scaleup": true,
+    "scaleup_command": ".venv\\Scripts\\python.exe generate_joint_molecules.py --checkpoint experiments/models/Issue3-ChemistryReadout/joint_generator.pt --batch_size 128 --num_batches 3907 --desired_pIC50 7.0 --desired_logBB 0.0 --seed 43 --output results/baseline_screen_500000_generated.csv",
+    "scaleup_seed": 43,
+    "scaleup_num_batches": 3907,
+    "scaleup_total_target_graphs": 500096,
+    "estimated_runtime_hours": 4.5,
+    "estimated_disk_generated_mb": 500,
+    "estimated_disk_predictions_mb": 200
+  }
+}

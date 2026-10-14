@@ -1,0 +1,2 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+352,3,96,c1ccc2oc(-c3cncc(-c4cnn(-c5ccncc5)c4)c3)nc2c1,True,26,1,BACE1,7.0,0.0,experiments/models/Issue5-JointPositiveDisc-Pilot/generator_pilot.pt,42,c1ccc2oc(-c3cncc(-c4cnn(-c5ccncc5)c4)c3)nc2c1,5.633980327755428,-0.042282272262769115,0.047351834280258694

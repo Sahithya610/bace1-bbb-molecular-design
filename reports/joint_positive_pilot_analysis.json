@@ -1,0 +1,42 @@
+{
+  "experiment": "Issue5-JointPositiveDisc-Pilot",
+  "pilot_log": "logs/joint_positive_pilot_log.txt",
+  "checkpoint_dir": "experiments/models/Issue5-JointPositiveDisc-Pilot",
+  "batch_size": 32,
+  "max_steps": 500,
+  "steps_completed": 450,
+  "early_stop_reason": "ValidFrac < 0.01 for 3 consecutive log steps (step 450)",
+  "smoke_test_clarifications": {
+    "graphs_decoded_in_smoke": 8,
+    "valid_in_smoke": 1,
+    "smoke_validity_fraction": 0.125,
+    "atom_class_distribution_recorded": false,
+    "tanimoto_check_in_smoke": false,
+    "smoke_sample_conclusion": "Too small (n=8, 10 steps) to assess generation quality. Smoke test only verified execution, finite losses, and absence of NaN gradients."
+  },
+  "pilot_validity_log": [
+    {"step": 50,  "G_loss": 6.8592, "D_loss": -5.2753, "ValidFrac": 1.0000, "MaxTc": 0.1341},
+    {"step": 100, "G_loss": 2.7089, "D_loss": -4.2313, "ValidFrac": 0.9688, "MaxTc": 0.1605},
+    {"step": 150, "G_loss": 5.9974, "D_loss": -6.3188, "ValidFrac": 0.9062, "MaxTc": 0.1687},
+    {"step": 200, "G_loss": 4.7853, "D_loss": -4.7280, "ValidFrac": 0.9688, "MaxTc": 0.1733},
+    {"step": 250, "G_loss": 4.7828, "D_loss": -4.1616, "ValidFrac": 0.9375, "MaxTc": 0.1683},
+    {"step": 300, "G_loss": 6.5547, "D_loss": -5.1157, "ValidFrac": 0.9688, "MaxTc": 0.2143},
+    {"step": 350, "G_loss": 2.7377, "D_loss": -1.6607, "ValidFrac": 0.0000, "MaxTc": 0.0000},
+    {"step": 400, "G_loss": 4.9111, "D_loss": -4.0674, "ValidFrac": 0.0000, "MaxTc": 0.0000},
+    {"step": 450, "G_loss": 5.5894, "D_loss": -6.0872, "ValidFrac": 0.0000, "MaxTc": 0.0000}
+  ],
+  "pilot_assessment": {
+    "losses_finite_throughout": true,
+    "nan_gradients_observed": false,
+    "memorization_observed": false,
+    "max_tc_observed": 0.2143,
+    "stability_window_steps": "50-300",
+    "collapse_onset_step": 350,
+    "collapse_type": "validity_collapse_not_loss_divergence",
+    "collapse_notes": "G_loss remained finite (2.74) at collapse onset; D_loss also finite (-1.66). Consistent with mode collapse to invalid graphs rather than numerical instability.",
+    "joint_threshold_evaluation_done": false,
+    "recommendation": "Evaluate the pre-collapse checkpoint (step ~300, captured as generator_pilot.pt which is step 450 post-collapse) using independent predictors. The saved checkpoint is from after collapse. A mid-run checkpoint at step 300 was not saved. Options: (A) re-run pilot with checkpoint saving every 50 steps; (B) accept pilot as inconclusive for joint-threshold evaluation and diagnose collapse cause before further runs."
+  },
+  "bbb_label_warning": "predicted_logBB values are B3DB ExtraTrees model predictions (test R2=0.354), NOT experimental BBB permeability measurements",
+  "baseline_checkpoints_untouched": true
+}

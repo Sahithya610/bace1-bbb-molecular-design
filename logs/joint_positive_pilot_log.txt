@@ -1,0 +1,268 @@
+======================================================================
+Issue 5 — Joint-Positive Discriminator Pilot
+======================================================================
+{
+  "experiment": "Issue5-JointPositiveDisc-Pilot",
+  "hypothesis": "Discriminator trained exclusively on joint-positive BACE1 molecules (pIC50>=7.6576 AND logBB>=0.0) will guide the generator toward the joint-property distribution without explicit continuous conditioning",
+  "bbb_label_warning": "predicted_logBB values are B3DB ExtraTrees model predictions (test R2=0.354), NOT experimental BBB permeability measurements",
+  "approach": "Option A: zero condition vector passed to ConditionalGenerator, lambda_condition=0.0",
+  "changes_from_baseline": [
+    "drug_raw_file replaced with bace1_joint_positive_train.smi",
+    "condition = torch.zeros(batch_size, 3) passed to generator",
+    "lambda_condition set to 0.0 (no condition consistency loss)"
+  ],
+  "unchanged": [
+    "WGAN-GP",
+    "architecture",
+    "auxiliary property head (monitoring only)",
+    "critic convention",
+    "ChEMBL general input to generator"
+  ],
+  "warm_start_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "warm_start_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "bace1_smi_for_vocab": "druggen_data/bace1.smi",
+  "joint_positive_train_smi": "druggen_data/bace1_joint_positive_train.smi",
+  "batch_size": 32,
+  "max_steps": 500,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 0.0,
+  "seed": 1
+}
+Device: cuda
+----------------------------------------------------------------------
+DATASET CONFIGURATION
+----------------------------------------------------------------------
+General graphs             : 1,418,299
+Joint-positive BACE1 graphs: 187
+Maximum atoms              : 45
+Atom dimension             : 14
+Bond dimension             : 5
+Condition dim              : 3 (all zeros, Option A)
+Loading joint-positive training set fingerprints for Tanimoto monitoring...
+Loaded 187 training-set fingerprints.
+
+======================================================================
+TRAINING START
+======================================================================
+STEP=50 G=6.8592 D=-5.2753 ValidFrac=1.0000 MaxTc=0.1341
+STEP=100 G=2.7089 D=-4.2313 ValidFrac=0.9688 MaxTc=0.1605
+STEP=150 G=5.9974 D=-6.3188 ValidFrac=0.9062 MaxTc=0.1687
+STEP=200 G=4.7853 D=-4.7280 ValidFrac=0.9688 MaxTc=0.1733
+STEP=250 G=4.7828 D=-4.1616 ValidFrac=0.9375 MaxTc=0.1683
+STEP=300 G=6.5547 D=-5.1157 ValidFrac=0.9688 MaxTc=0.2143
+STEP=350 G=2.7377 D=-1.6607 ValidFrac=0.0000 MaxTc=0.0000
+STEP=400 G=4.9111 D=-4.0674 ValidFrac=0.0000 MaxTc=0.0000
+STEP=450 G=5.5894 D=-6.0872 ValidFrac=0.0000 MaxTc=0.0000
+STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)
+
+======================================================================
+PILOT COMPLETE
+======================================================================
+Steps completed: 450
+Saved generator    : C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\experiments\models\Issue5-JointPositiveDisc-Pilot\generator_pilot.pt
+Saved discriminator: C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\experiments\models\Issue5-JointPositiveDisc-Pilot\discriminator_pilot.pt
+Early stop reason: STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)
+======================================================================
+Issue 5 — Joint-Positive Discriminator Pilot
+======================================================================
+{
+  "experiment": "Issue5-JointPositiveDisc-Pilot",
+  "hypothesis": "Discriminator trained exclusively on joint-positive BACE1 molecules (pIC50>=7.6576 AND logBB>=0.0) will guide the generator toward the joint-property distribution without explicit continuous conditioning",
+  "bbb_label_warning": "predicted_logBB values are B3DB ExtraTrees model predictions (test R2=0.354), NOT experimental BBB permeability measurements",
+  "approach": "Option A: zero condition vector passed to ConditionalGenerator, lambda_condition=0.0",
+  "changes_from_baseline": [
+    "drug_raw_file replaced with bace1_joint_positive_train.smi",
+    "condition = torch.zeros(batch_size, 3) passed to generator",
+    "lambda_condition set to 0.0 (no condition consistency loss)"
+  ],
+  "unchanged": [
+    "WGAN-GP",
+    "architecture",
+    "auxiliary property head (monitoring only)",
+    "critic convention",
+    "ChEMBL general input to generator"
+  ],
+  "warm_start_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "warm_start_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "bace1_smi_for_vocab": "druggen_data/bace1.smi",
+  "joint_positive_train_smi": "druggen_data/bace1_joint_positive_train.smi",
+  "batch_size": 32,
+  "max_steps": 500,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 0.0,
+  "seed": 1
+}
+Device: cuda
+----------------------------------------------------------------------
+DATASET CONFIGURATION
+----------------------------------------------------------------------
+General graphs             : 1,418,299
+Joint-positive BACE1 graphs: 187
+Maximum atoms              : 45
+Atom dimension             : 14
+Bond dimension             : 5
+Condition dim              : 3 (all zeros, Option A)
+Loading joint-positive training set fingerprints for Tanimoto monitoring...
+Loaded 187 training-set fingerprints.
+
+======================================================================
+TRAINING START
+======================================================================
+STEP=50 G=6.8592 D=-5.2753 ValidFrac=1.0000 MaxTc=0.1341
+STEP=100 G=2.7089 D=-4.2313 ValidFrac=0.9688 MaxTc=0.1605
+STEP=150 G=5.9974 D=-6.3188 ValidFrac=0.9062 MaxTc=0.1687
+STEP=200 G=4.7853 D=-4.7280 ValidFrac=0.9688 MaxTc=0.1733
+STEP=250 G=4.7828 D=-4.1616 ValidFrac=0.9375 MaxTc=0.1683
+STEP=300 G=6.5547 D=-5.1157 ValidFrac=0.9688 MaxTc=0.2143
+STEP=350 G=2.7377 D=-1.6607 ValidFrac=0.0000 MaxTc=0.0000
+STEP=400 G=4.9111 D=-4.0674 ValidFrac=0.0000 MaxTc=0.0000
+STEP=450 G=5.5894 D=-6.0872 ValidFrac=0.0000 MaxTc=0.0000
+STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)
+
+======================================================================
+PILOT COMPLETE
+======================================================================
+Steps completed: 450
+Saved generator    : experiments\models\Issue5-JointPositiveDisc-Pilot\generator_pilot.pt
+Saved discriminator: experiments\models\Issue5-JointPositiveDisc-Pilot\discriminator_pilot.pt
+Early stop reason: STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)
+======================================================================
+Issue 5 — Joint-Positive Discriminator Pilot
+======================================================================
+{
+  "experiment": "Issue5-JointPositiveDisc-Pilot",
+  "hypothesis": "Discriminator trained exclusively on joint-positive BACE1 molecules (pIC50>=7.6576 AND logBB>=0.0) will guide the generator toward the joint-property distribution without explicit continuous conditioning",
+  "bbb_label_warning": "predicted_logBB values are B3DB ExtraTrees model predictions (test R2=0.354), NOT experimental BBB permeability measurements",
+  "approach": "Option A: zero condition vector passed to ConditionalGenerator, lambda_condition=0.0",
+  "changes_from_baseline": [
+    "drug_raw_file replaced with bace1_joint_positive_train.smi",
+    "condition = torch.zeros(batch_size, 3) passed to generator",
+    "lambda_condition set to 0.0 (no condition consistency loss)"
+  ],
+  "unchanged": [
+    "WGAN-GP",
+    "architecture",
+    "auxiliary property head (monitoring only)",
+    "critic convention",
+    "ChEMBL general input to generator"
+  ],
+  "warm_start_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "warm_start_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "bace1_smi_for_vocab": "druggen_data/bace1.smi",
+  "joint_positive_train_smi": "druggen_data/bace1_joint_positive_train.smi",
+  "batch_size": 32,
+  "max_steps": 500,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 0.0,
+  "seed": 1
+}
+Device: cuda
+----------------------------------------------------------------------
+DATASET CONFIGURATION
+----------------------------------------------------------------------
+General graphs             : 1,418,299
+Joint-positive BACE1 graphs: 187
+Maximum atoms              : 45
+Atom dimension             : 14
+Bond dimension             : 5
+Condition dim              : 3 (all zeros, Option A)
+Loading joint-positive training set fingerprints for Tanimoto monitoring...
+Loaded 187 training-set fingerprints.
+
+======================================================================
+TRAINING START
+======================================================================
+STEP=50 G=6.8592 D=-5.2753 ValidFrac=1.0000 MaxTc=0.1341
+STEP=100 G=2.7089 D=-4.2313 ValidFrac=0.9688 MaxTc=0.1605
+STEP=150 G=5.9974 D=-6.3188 ValidFrac=0.9062 MaxTc=0.1687
+STEP=200 G=4.7853 D=-4.7280 ValidFrac=0.9688 MaxTc=0.1733
+STEP=250 G=4.7828 D=-4.1616 ValidFrac=0.9375 MaxTc=0.1683
+STEP=300 G=6.5547 D=-5.1157 ValidFrac=0.9688 MaxTc=0.2143
+STEP=350 G=2.7377 D=-1.6607 ValidFrac=0.0000 MaxTc=0.0000
+STEP=400 G=4.9111 D=-4.0674 ValidFrac=0.0000 MaxTc=0.0000
+STEP=450 G=5.5894 D=-6.0872 ValidFrac=0.0000 MaxTc=0.0000
+STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)
+
+======================================================================
+PILOT COMPLETE
+======================================================================
+Steps completed: 450
+Saved generator    : experiments\models\Issue5-JointPositiveDisc-Pilot\generator_pilot.pt
+Saved discriminator: experiments\models\Issue5-JointPositiveDisc-Pilot\discriminator_pilot.pt
+Early stop reason: STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)
+======================================================================
+Issue 5 — Joint-Positive Discriminator Pilot
+======================================================================
+{
+  "experiment": "Issue5-JointPositiveDisc-Pilot",
+  "hypothesis": "Discriminator trained exclusively on joint-positive BACE1 molecules (pIC50>=7.6576 AND logBB>=0.0) will guide the generator toward the joint-property distribution without explicit continuous conditioning",
+  "bbb_label_warning": "predicted_logBB values are B3DB ExtraTrees model predictions (test R2=0.354), NOT experimental BBB permeability measurements",
+  "approach": "Option A: zero condition vector passed to ConditionalGenerator, lambda_condition=0.0",
+  "changes_from_baseline": [
+    "drug_raw_file replaced with bace1_joint_positive_train.smi",
+    "condition = torch.zeros(batch_size, 3) passed to generator",
+    "lambda_condition set to 0.0 (no condition consistency loss)"
+  ],
+  "unchanged": [
+    "WGAN-GP",
+    "architecture",
+    "auxiliary property head (monitoring only)",
+    "critic convention",
+    "ChEMBL general input to generator"
+  ],
+  "warm_start_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "warm_start_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "bace1_smi_for_vocab": "druggen_data/bace1.smi",
+  "joint_positive_train_smi": "druggen_data/bace1_joint_positive_train.smi",
+  "batch_size": 32,
+  "max_steps": 500,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 0.0,
+  "seed": 1
+}
+Device: cuda
+----------------------------------------------------------------------
+DATASET CONFIGURATION
+----------------------------------------------------------------------
+General graphs             : 1,418,299
+Joint-positive BACE1 graphs: 187
+Maximum atoms              : 45
+Atom dimension             : 14
+Bond dimension             : 5
+Condition dim              : 3 (all zeros, Option A)
+Loading joint-positive training set fingerprints for Tanimoto monitoring...
+Loaded 187 training-set fingerprints.
+
+======================================================================
+TRAINING START
+======================================================================
+STEP=50 G=6.8592 D=-5.2753 ValidFrac=1.0000 MaxTc=0.1341
+STEP=100 G=2.7089 D=-4.2313 ValidFrac=0.9688 MaxTc=0.1605
+STEP=150 G=5.9974 D=-6.3188 ValidFrac=0.9062 MaxTc=0.1687
+STEP=200 G=4.7853 D=-4.7280 ValidFrac=0.9688 MaxTc=0.1733
+STEP=250 G=4.7828 D=-4.1616 ValidFrac=0.9375 MaxTc=0.1683
+STEP=300 G=6.5547 D=-5.1157 ValidFrac=0.9688 MaxTc=0.2143
+STEP=350 G=2.7377 D=-1.6607 ValidFrac=0.0000 MaxTc=0.0000
+STEP=400 G=4.9111 D=-4.0674 ValidFrac=0.0000 MaxTc=0.0000
+STEP=450 G=5.5894 D=-6.0872 ValidFrac=0.0000 MaxTc=0.0000
+STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)
+
+======================================================================
+PILOT COMPLETE
+======================================================================
+Steps completed: 450
+Saved generator    : experiments\models\Issue5-JointPositiveDisc-Pilot\generator_pilot.pt
+Saved discriminator: experiments\models\Issue5-JointPositiveDisc-Pilot\discriminator_pilot.pt
+Early stop reason: STOP: ValidFrac < 0.01 for 3 consecutive log steps (step 450)

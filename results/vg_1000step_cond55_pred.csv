@@ -1,0 +1,6 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+1,1,1,C,True,23.0,0.0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-1000step/joint_generator.pt,42,C,4.7718374124115375,0.17766052368894947,0.3399756575955624
+4,1,4,CF,True,25.0,0.0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-1000step/joint_generator.pt,42,CF,5.0867026695605455,0.31265583344156933,0.5195807385372312
+8,1,8,FC(F)F,True,27.0,0.0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-1000step/joint_generator.pt,42,FC(F)F,5.023482222620167,0.3053688296963781,0.5098857135776554
+69,1,69,FCF,True,28.0,0.0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-1000step/joint_generator.pt,42,FCF,5.127066939696003,0.30372285246202924,0.5076958162031088
+94,1,94,F,True,7.0,0.0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-1000step/joint_generator.pt,42,F,4.757241985823419,0.26921474232868825,0.46178435509382787

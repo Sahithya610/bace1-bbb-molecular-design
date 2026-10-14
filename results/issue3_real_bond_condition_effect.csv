@@ -1,0 +1,3 @@
+position_type,positions,mean_margin_A,mean_margin_B,mean_abs_logit_change,effect_to_margin_ratio,near_boundary_A,near_boundary_A_pct,near_boundary_B,near_boundary_B_pct,class_flips,class_flip_pct
+real,249898,1.0432641205111686,0.5749724793965938,1.2796840173290702,1.5815783889723056,0,0.0,41869,16.754435809810403,0,0.0
+no_bond,9302,0.9400625054591755,0.5267357868267577,1.2454848944615404,1.6982360846909814,0,0.0,0,0.0,0,0.0

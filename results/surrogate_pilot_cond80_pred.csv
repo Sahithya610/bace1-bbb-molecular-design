@@ -1,0 +1,3 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+18,1,18,[HH],True,3.0,1.0,BACE1,8.0,0.0,experiments/models/Issue3-SurrogateLoss-Pilot100/joint_generator.pt,42,[HH],4.746627316265753,0.16393837011835796,0.32171896032766156
+250,2,122,O,True,5.0,5.0,BACE1,8.0,0.0,experiments/models/Issue3-SurrogateLoss-Pilot100/joint_generator.pt,42,O,4.823769054805229,0.25741773712020005,0.44608897960839416

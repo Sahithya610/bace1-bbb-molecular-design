@@ -1,0 +1,16 @@
+molecule_id,molecule_role,receptor_protonation_state,mode_rank,vina_binding_score_kcal_mol,heavy_atom_rmsd_to_crystal_A,docking_status,pose_pdbqt_file
+3BN_crystal_ref,Co-crystallized Reference Ligand,Deprotonated Dyad,1,-8.65,1.33,VALIDATED_PASS,docking/redock_3BN_deprot_out.pdbqt
+Candidate_1308,Best fully clean BBB-positive candidate from baseline screen,Deprotonated Dyad,1,-8.008,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_1308_deprot_out.pdbqt
+Candidate_1902,Second fully clean BBB-positive candidate from baseline screen,Deprotonated Dyad,1,-9.05,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_1902_deprot_out.pdbqt
+ANALOGUE_0011,Dual-threshold hit from targeted optimization (fluorinated PARENT_A1),Deprotonated Dyad,1,-7.512,N/A (de novo docked),VALIDATED_PROTOCOL,docking/ANALOGUE_0011_deprot_out.pdbqt
+Candidate_3,Highest-pIC50 novel clean candidate from 50k pilot (PARENT_A3 reference),Deprotonated Dyad,1,-7.207,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_3_deprot_out.pdbqt
+3BN_crystal_ref,Co-crystallized Reference Ligand,Asp32 Monoprotonated,1,-8.614,1.572,VALIDATED_PASS,docking/redock_3BN_ash32_out.pdbqt
+Candidate_1308,Best fully clean BBB-positive candidate from baseline screen,Asp32 Monoprotonated,1,-8.02,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_1308_ash32_out.pdbqt
+Candidate_1902,Second fully clean BBB-positive candidate from baseline screen,Asp32 Monoprotonated,1,-9.082,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_1902_ash32_out.pdbqt
+ANALOGUE_0011,Dual-threshold hit from targeted optimization (fluorinated PARENT_A1),Asp32 Monoprotonated,1,-7.522,N/A (de novo docked),VALIDATED_PROTOCOL,docking/ANALOGUE_0011_ash32_out.pdbqt
+Candidate_3,Highest-pIC50 novel clean candidate from 50k pilot (PARENT_A3 reference),Asp32 Monoprotonated,1,-7.222,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_3_ash32_out.pdbqt
+3BN_crystal_ref,Co-crystallized Reference Ligand,Asp228 Monoprotonated,1,-8.577,1.589,VALIDATED_PASS,docking/redock_3BN_ash228_out.pdbqt
+Candidate_1308,Best fully clean BBB-positive candidate from baseline screen,Asp228 Monoprotonated,1,-8.037,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_1308_ash228_out.pdbqt
+Candidate_1902,Second fully clean BBB-positive candidate from baseline screen,Asp228 Monoprotonated,1,-9.076,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_1902_ash228_out.pdbqt
+ANALOGUE_0011,Dual-threshold hit from targeted optimization (fluorinated PARENT_A1),Asp228 Monoprotonated,1,-7.455,N/A (de novo docked),VALIDATED_PROTOCOL,docking/ANALOGUE_0011_ash228_out.pdbqt
+Candidate_3,Highest-pIC50 novel clean candidate from 50k pilot (PARENT_A3 reference),Asp228 Monoprotonated,1,-7.199,N/A (de novo docked),VALIDATED_PROTOCOL,docking/Candidate_3_ash228_out.pdbqt

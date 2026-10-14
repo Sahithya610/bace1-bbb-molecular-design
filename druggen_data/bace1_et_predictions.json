@@ -1,0 +1,19 @@
+{
+  "input_csv": "druggen_data\\bace1_continuous_bbb.csv",
+  "model_path": "results\\bace1_activity_model\\bace1_activity_model.joblib",
+  "output_csv": "druggen_data\\bace1_et_predictions.csv",
+  "n_molecules": 8271,
+  "fingerprint": {
+    "type": "Morgan",
+    "radius": 2,
+    "n_bits": 2048
+  },
+  "normalization": {
+    "mean": 6.691315,
+    "std": 1.308678
+  },
+  "pooled_r2": 0.8015983093900814,
+  "pooled_mae": 0.42174470456982444,
+  "et_pred_mean": 6.6518144607543945,
+  "et_pred_std": 1.0488070249557495
+}

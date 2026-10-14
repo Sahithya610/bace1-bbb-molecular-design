@@ -1,0 +1,91 @@
+{
+  "candidate_id": "ANALOGUE_0011",
+  "parent_id": "PARENT_A1",
+  "canonical_smiles": "CC(C)(C)COc1cnc2c(c1)C1(COC(N)=N1)c1cc(-c3cncnc3F)ccc1O2",
+  "model_architecture": "ExtraTreesRegressor",
+  "model_checkpoint_path": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\bace1_activity_model\\bace1_activity_model.joblib",
+  "model_metadata_path": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\bace1_activity_model\\model_metadata.json",
+  "fingerprint_specifications": {
+    "type": "MorganBitVector (ECFP4 equivalent)",
+    "radius": 2,
+    "n_bits": 2048,
+    "chirality": false,
+    "data_type": "float32"
+  },
+  "prediction_results": {
+    "reported_pIC50": 7.7983,
+    "reproduced_pIC50": 7.7983,
+    "exact_pIC50": 7.7982848517575105,
+    "difference_from_reported": 1.5e-05,
+    "threshold": 7.6576,
+    "passes_threshold": true,
+    "margin_above_threshold": 0.1407
+  },
+  "ensemble_uncertainty": {
+    "n_estimators": 500,
+    "tree_predictions_mean": 7.7983,
+    "tree_predictions_std": 0.9347,
+    "tree_predictions_min": 4.7783,
+    "tree_predictions_max": 8.9869,
+    "tree_predictions_iqr": [
+      7.4253,
+      8.5318
+    ]
+  },
+  "heldout_test_metrics": {
+    "scaffold_test_R2": 0.6156,
+    "scaffold_test_RMSE": 0.7553,
+    "scaffold_test_MAE": 0.5879
+  },
+  "uncertainty_evaluation": {
+    "margin_to_rmse_ratio": 0.1863,
+    "verdict": "The reproduced pIC50 of 7.7983 is numerically above the 7.6576 threshold by 0.1407 units. However, this margin is substantially smaller than the model's scaffold-held-out test RMSE of 0.7553 and the ensemble tree dispersion of 0.9347. While the parent compound PARENT_A1 also exhibits strong predicted affinity (7.9037), the prediction cannot be treated as a confirmed laboratory potency measurement."
+  },
+  "nearest_training_neighbors": [
+    {
+      "dataset": "BACE1_Training_Set",
+      "index": 674,
+      "train_smiles": "CC(C)(C)COc1cnc2c(c1)[C@]1(COC(N)=N1)c1cc(-c3cccnc3F)ccc1O2",
+      "tanimoto_similarity": 0.8,
+      "activity_pic50": 8.9915,
+      "scaffold": "C1=NC2(CO1)c1cc(-c3cccnc3)ccc1Oc1ncccc12",
+      "is_same_scaffold": false
+    },
+    {
+      "dataset": "BACE1_Training_Set",
+      "index": 675,
+      "train_smiles": "CC(C)(C)COc1cnc2c(c1)[C@]1(COC(N)=N1)c1cc(-c3cncnc3)ccc1O2",
+      "tanimoto_similarity": 0.791,
+      "activity_pic50": 8.7557,
+      "scaffold": "C1=NC2(CO1)c1cc(-c3cncnc3)ccc1Oc1ncccc12",
+      "is_same_scaffold": true
+    },
+    {
+      "dataset": "BACE1_Training_Set",
+      "index": 672,
+      "train_smiles": "CC(C)(C)COc1ccc2c(c1)[C@]1(COC(N)=N1)c1cc(-c3cncnc3)cnc1O2",
+      "tanimoto_similarity": 0.7246,
+      "activity_pic50": 6.2376,
+      "scaffold": "C1=NC2(CO1)c1ccccc1Oc1ncc(-c3cncnc3)cc12",
+      "is_same_scaffold": false
+    },
+    {
+      "dataset": "BACE1_Training_Set",
+      "index": 673,
+      "train_smiles": "CC(C)(C)COc1cnc2c(c1)[C@]1(COC(N)=N1)c1cc(-c3cccnc3)ccc1O2",
+      "tanimoto_similarity": 0.7083,
+      "activity_pic50": 8.821,
+      "scaffold": "C1=NC2(CO1)c1cc(-c3cccnc3)ccc1Oc1ncccc12",
+      "is_same_scaffold": false
+    },
+    {
+      "dataset": "BACE1_Training_Set",
+      "index": 3242,
+      "train_smiles": "COC(C)(C)COc1cnc2c(c1)[C@]1(COC(N)=N1)c1cc(-c3cccnc3F)ccc1O2",
+      "tanimoto_similarity": 0.6974,
+      "activity_pic50": 8.4626,
+      "scaffold": "C1=NC2(CO1)c1cc(-c3cccnc3)ccc1Oc1ncccc12",
+      "is_same_scaffold": false
+    }
+  ]
+}

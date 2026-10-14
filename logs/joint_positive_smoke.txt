@@ -1,0 +1,6 @@
+SMOKE TEST: PASSED
+G_loss_final: 11.877243995666504
+D_loss_final: -2.967043876647949
+valid_molecules_in_sample: 1
+nan_gradients: False
+detail: all checks passed

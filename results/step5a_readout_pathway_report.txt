@@ -1,0 +1,34 @@
+Checkpoint: experiments\models\Issue3-ChemistryReadout\joint_generator.pt
+Position-independent logit shift from readout_condition, relative to pIC50=5.5
+(only the pIC50 component of the condition varies; target=1.0, logBB fixed)
+
+NODE (atom) classes
+  class           pIC50=6.5     pIC50=7.0     pIC50=8.0     pIC50=9.0   
+   0 pad(Z0)          +0.0140       +0.0209       +0.0294       +0.0309
+   1 H                +0.0409       +0.0658       +0.1165       +0.1596
+   2 B                -0.0126       -0.0166       -0.0271       -0.0459
+   3 C                -0.0727       -0.1126       -0.2017       -0.2996
+   4 N                +0.0278       +0.0347       +0.0275       -0.0059
+   5 O                +0.0864       +0.1193       +0.1613       +0.1731
+   6 F                +0.0442       +0.0670       +0.1054       +0.1241
+   7 Si               +0.0279       +0.0426       +0.0770       +0.1188
+   8 P                +0.0183       +0.0299       +0.0516       +0.0658
+   9 S                -0.0003       -0.0124       -0.0592       -0.1211
+  10 Cl               -0.0181       -0.0244       -0.0362       -0.0507
+  11 Se               +0.0076       +0.0186       +0.0428       +0.0540
+  12 Br               -0.0320       -0.0503       -0.0885       -0.1247
+  13 I                -0.0119       -0.0235       -0.0561       -0.0903
+  max |shift|           0.0864        0.1193        0.2017        0.2996
+  spread (max-min over classes; only class DIFFERENCES can change an argmax)
+                        0.1591        0.2319        0.3630        0.4727
+
+EDGE (bond) classes
+  class           pIC50=6.5     pIC50=7.0     pIC50=8.0     pIC50=9.0   
+   0 no-bond          -0.0051       -0.0136       -0.0403       -0.0714
+   1 single           -0.0384       -0.0526       -0.0758       -0.0964
+   2 double           -0.0067       -0.0099       -0.0124       -0.0061
+   3 triple           -0.0211       -0.0319       -0.0571       -0.0875
+   4 aromatic         +0.0014       +0.0026       +0.0045       +0.0048
+  max |shift|           0.0384        0.0526        0.0758        0.0964
+  spread (max-min over classes; only class DIFFERENCES can change an argmax)
+                        0.0398        0.0552        0.0803        0.1012

@@ -1,0 +1,65 @@
+==============================================================================
+Issue 5 Recovery — Checkpointed Joint-Positive Discriminator Training
+==============================================================================
+{
+  "experiment": "Issue5-JointPositive-Checkpointed",
+  "objective": "Controlled rerun of Issue 5 joint-positive discriminator training with intermediate checkpoints saved every 50 steps (50, 100, 150, 200, 250, 300, 350, 400, 450, 500) to preserve pre-collapse model states and evaluate generation with production pipeline.",
+  "approach": "Option A: zero condition vector passed to ConditionalGenerator, lambda_condition=0.0",
+  "warm_start_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "warm_start_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "chembl_smi": "data/chembl_train.smi",
+  "bace1_smi_for_vocab": "druggen_data/bace1.smi",
+  "joint_positive_train_smi": "druggen_data/bace1_joint_positive_train.smi",
+  "batch_size": 32,
+  "max_steps": 500,
+  "checkpoint_interval": 50,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 0.0,
+  "clip_grad_norm": 0.0,
+  "clipping_decision": "Gradient clipping disabled (clip_grad_norm=0.0). Decision rationale: Previous audit diagnostics established that collapse was mode/validity collapse without loss divergence or NaN gradients. Pre- and post-clip norms are logged.",
+  "seed": 1
+}
+
+Device: cuda
+GPU: NVIDIA RTX 2000 Ada Generation
+
+------------------------------------------------------------------------------
+DATASET CONFIGURATION
+------------------------------------------------------------------------------
+General graphs             : 1,418,299
+Joint-positive BACE1 graphs: 187
+Maximum atoms              : 45
+Atom dimension             : 14
+Bond dimension             : 5
+Condition dim              : 3 (Option A: all zeros)
+
+Loading joint-positive training set fingerprints for Tanimoto monitoring...
+Loaded 187 training-set fingerprints.
+
+==============================================================================
+TRAINING START
+==============================================================================
+STEP= 50 | G=+6.6627 D=-4.9336 | G_norm=10.919 D_norm=53.408 | Valid=1.000 (32/32) | Uniq=1.000 | MaxTc=0.134 | PAD=24.65% | Time=12.4s
+STEP=100 | G=+2.2676 D=-3.5780 | G_norm=16.027 D_norm=36.629 | Valid=1.000 (32/32) | Uniq=1.000 | MaxTc=0.152 | PAD=42.92% | Time=20.9s
+STEP=150 | G=+5.0282 D=-5.8474 | G_norm=6.939 D_norm=44.657 | Valid=0.969 (31/32) | Uniq=1.000 | MaxTc=0.159 | PAD=29.51% | Time=29.4s
+STEP=200 | G=+4.7389 D=-4.8788 | G_norm=6.721 D_norm=23.205 | Valid=1.000 (32/32) | Uniq=1.000 | MaxTc=0.173 | PAD=44.72% | Time=38.0s
+STEP=250 | G=+4.5934 D=-4.8061 | G_norm=4.870 D_norm=22.601 | Valid=0.875 (28/32) | Uniq=1.000 | MaxTc=0.168 | PAD=31.39% | Time=46.8s
+STEP=300 | G=+6.2593 D=-5.9827 | G_norm=5.074 D_norm=20.701 | Valid=0.969 (31/32) | Uniq=1.000 | MaxTc=0.214 | PAD=33.33% | Time=55.5s
+STEP=350 | G=+3.4271 D=-2.1783 | G_norm=4.160 D_norm=35.639 | Valid=0.000 (0/32) | Uniq=0.000 | MaxTc=0.000 | PAD=31.60% | Time=64.2s
+STEP=400 | G=+6.1022 D=-5.7580 | G_norm=4.475 D_norm=30.416 | Valid=0.000 (0/32) | Uniq=0.000 | MaxTc=0.000 | PAD=30.35% | Time=72.8s
+STEP=450 | G=+7.0765 D=-6.3233 | G_norm=3.172 D_norm=35.754 | Valid=0.000 (0/32) | Uniq=0.000 | MaxTc=0.000 | PAD=21.46% | Time=81.6s
+STOP: Generated validity collapsed for 3 consecutive intervals (ValidFrac < 0.01 at step 450)
+
+==============================================================================
+TRAINING COMPLETED OR STOPPED
+==============================================================================
+Total steps completed: 450
+Total elapsed time   : 81.94s
+Final checkpoint     : experiments\models\Issue5-JointPositive-Checkpointed\checkpoint_final.pt
+Final generator      : experiments\models\Issue5-JointPositive-Checkpointed\generator_final.pt
+Final discriminator  : experiments\models\Issue5-JointPositive-Checkpointed\discriminator_final.pt
+Checkpoint manifest  : experiments\models\Issue5-JointPositive-Checkpointed\checkpoint_manifest.json
+Early stop triggered : STOP: Generated validity collapsed for 3 consecutive intervals (ValidFrac < 0.01 at step 450)

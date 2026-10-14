@@ -1,0 +1,43 @@
+Checkpoint: experiments/models/Issue3-ChemistryReadout/joint_generator.pt
+Inputs: first (1024 ChEMBL graphs) | logBB 0.0
+
+--- requested pIC50 = 5.5 ---
+graphs: 1024
+raw graph sanitizes (all 45 positions, before any rescue): 818 (79.88%)
+clean decode (sanitizes, 1 real fragment, no padding bonded in): 780 (76.17%)
+final valid after generation-script pipeline: 818 (79.88%)
+  unique among final valid: 818
+  valid only thanks to dropping extra real fragments: 38
+  valid only thanks to '*' -> 'C' (padding bonded to real atoms): 0
+graphs with padding nodes bonded to real atoms: 0 (0.00%)
+graphs with no real atoms at all (pipeline returns 'C'): 0
+mean real atoms 28.78 | padding nodes 16.22 | real-real bonds 29.38 | pad-real bonds 0.000
+argmax atom-class share among real nodes (before any rescue): C 77.15%, N 9.47%, O 10.10%, F 2.21%, S 1.07%
+raw graphs containing >=1 oxygen node: 907 (88.57%)
+final valid molecules containing: C 100.00%, N 83.13%, O 89.73%, S 26.89%, F 36.06%, Cl 0.00% | mean heavy atoms 27.36
+similarity to own ChEMBL input: mean node-label agreement 0.9495, mean bond Jaccard 0.9974, exact SMILES copies of the input 571 (55.76%)
+
+--- requested pIC50 = 8.0 ---
+graphs: 1024
+raw graph sanitizes (all 45 positions, before any rescue): 611 (59.67%)
+clean decode (sanitizes, 1 real fragment, no padding bonded in): 317 (30.96%)
+final valid after generation-script pipeline: 611 (59.67%)
+  unique among final valid: 611
+  valid only thanks to dropping extra real fragments: 294
+  valid only thanks to '*' -> 'C' (padding bonded to real atoms): 16
+graphs with padding nodes bonded to real atoms: 18 (1.76%)
+graphs with no real atoms at all (pipeline returns 'C'): 0
+mean real atoms 33.74 | padding nodes 11.26 | real-real bonds 28.45 | pad-real bonds 0.071
+argmax atom-class share among real nodes (before any rescue): C 81.84%, N 6.09%, O 6.14%, F 4.89%, S 0.54%, Cl 0.49%
+raw graphs containing >=1 oxygen node: 701 (68.46%)
+final valid molecules containing: C 100.00%, N 49.92%, O 66.12%, S 9.82%, F 28.48%, Cl 2.62% | mean heavy atoms 24.90
+similarity to own ChEMBL input: mean node-label agreement 0.7917, mean bond Jaccard 0.8402, exact SMILES copies of the input 19 (1.86%)
+
+Paired logit comparison, same input graphs: pIC50 5.5 (A) vs 8.0 (B); 1024 graphs
+  atom decisions: flipped 8464/46080 (18.3681%); graphs with >=1 flip: 499/1024
+    mean |logit change| per logit: 0.04835; max: 0.89286
+    mean top1-top2 margin under A: 0.9012; positions with margin < 0.25: 4.457%
+  bond decisions (lower triangle): flipped 4637/1013760 (0.4574%); graphs with >=1 flip: 956/1024
+    mean |logit change| per logit: 0.00459; max: 1.49946
+    mean top1-top2 margin under A: 0.9989; positions with margin < 0.25: 0.000%
+  final SMILES identical in both conditions: 26/1024; differ (both valid): 493; valid in only one: 391

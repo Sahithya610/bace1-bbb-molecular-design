@@ -1,0 +1,92 @@
+========================================================================
+FULL CONDITION-SENSITIVITY DIAGNOSTIC REPORT
+========================================================================
+
+[1] BASELINE – Issue3-ChemistryReadout
+------------------------------------------------------------
+  pIC50=5.5 → pred_pIC50:  μ=5.454  σ=0.277  med=5.459  n=105
+  pIC50=8.0 → pred_pIC50:  μ=5.444  σ=0.273  med=5.449  n=76
+  Δ mean = -0.010  |  Δ median = -0.011
+  Response: FAIL ✗ (need |Δ| ≥ 0.3)
+  logBB  5.5 → pred_logBB: μ=-0.190
+  logBB  8.0 → pred_logBB: μ=0.137
+
+[2] v3 HEAD-vs-EXTERNAL SWEEP (ChemistryReadout baseline)
+------------------------------------------------------------
+   req_pIC50   valid    head μ     ext μ    head-ext
+         5.5     595     5.394     5.490      -0.096
+         6.5     424     5.381     5.462      -0.081
+         7.0     395     5.378     5.463      -0.085
+         8.0     441     5.278     5.438      -0.160
+         9.0     328     5.006     5.456      -0.450
+
+  Δ(8.0−5.5) head = -0.117   ext = -0.052
+
+[3] SURROGATE-LOSS – Pilot100
+------------------------------------------------------------
+  pIC50=5.5 → pred_pIC50:  μ=5.103  n=4
+  pIC50=8.0 → pred_pIC50:  μ=4.785  n=2
+  Δ mean = -0.318   Response: PASS ✓
+
+[4] ET-DISTILL – Pilot100
+------------------------------------------------------------
+  pIC50=5.5 → pred_pIC50:  μ=5.340  n=432
+  pIC50=8.0 → pred_pIC50:  μ=5.567  n=44
+  Δ mean = +0.227   Response: FAIL ✗
+
+[5] ET-DISTILL – Pilot500
+------------------------------------------------------------
+  pIC50=5.5 → pred_pIC50:  μ=5.409  σ=0.283  n=189
+  pIC50=8.0 → pred_pIC50:  μ=5.475  σ=0.297  n=305
+  Δ mean = +0.066  |  Δ median = +0.024
+  Response: FAIL ✗ (need |Δ| ≥ 0.3)
+
+[6] CHEMISTRY-READOUT GENERATED-MOL DISTRIBUTION
+------------------------------------------------------------
+  611 molecules
+  pred_pIC50:  μ=5.430  σ=0.262  [5.10–5.78] (10–90 pctile)
+  pred_logBB:  μ=0.131  σ=0.183
+  pIC50 ≥ 6.0: 2.1%  |  logBB ≥ 0: 75.9%
+  Dual success (pIC50≥6 AND logBB≥0): 1.3%
+
+========================================================================
+SUMMARY: CONDITION RESPONSE Δ(8.0−5.5) ACROSS ALL PILOTS
+========================================================================
+  Model                             n_lo    μ_lo    n_hi    μ_hi       Δμ   Pass?
+  --------------------------------------------------------------------
+  Baseline ChemistryReadout          105   5.454      76   5.444   -0.010       ✗
+  SurrogateLoss Pilot100               4   5.103       2   4.785   -0.318       ✓
+  ET-Distill Pilot100                432   5.340      44   5.567   +0.227       ✗
+  ET-Distill Pilot500                189   5.409     305   5.475   +0.066       ✗
+
+========================================================================
+ROOT-CAUSE NOTES
+========================================================================
+
+  The core pattern across all approaches:
+    • Internal head (training loss) responds to conditioning: corr ~ 0.33–0.38
+    • External GNN oracle does NOT respond: Δ < 0.1 in every pilot
+    • Generator yields valid, diverse molecules — chemistry is fine
+    • Problem is purely conditioning → oracle mis-alignment
+
+  The generator IS changing molecular graphs in response to conditioning
+  (DiagSummary: 15–18% atom-decision flips between pIC50=5.5 and 8.0),
+  but those graph changes are not captured by the external activity model.
+
+  This is not a training convergence problem — it is a feature-space
+  mismatch: the GAN head learns features the GAN can easily manipulate,
+  while the external BACE1 predictor (GNN/RF) relies on different features.
+
+  Recommended next steps (in order of effort):
+    A. JOINT END-TO-END: back-prop through the external predictor during
+       generation (requires differentiable predictor, e.g. a GNN).
+    B. ORACLE AUGMENTATION: add the external predictor as a direct loss
+       component (lambda * oracle_loss) so the generator must satisfy it.
+    C. RANKER REPLACEMENT: swap the external oracle for one that shares
+       the same backbone as the GAN's internal head (align feature spaces).
+    D. CHECK ORACLE CALIBRATION: verify pred_pIC50 actually correlates
+       with training pIC50 on BACE1 ligands (run predict_joint on the
+       raw bace1_continuous_bbb.csv labels to measure Pearson r).
+
+
+Report written to: full_diagnostic_report.txt

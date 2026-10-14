@@ -1,0 +1,53 @@
+Project root: C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master
+
+C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\data\encoders:
+  atom_bace1_chembl_train.pkl  (72 bytes, mtime 1790927292)
+  bond_bace1_chembl_train.pkl  (97 bytes, mtime 1790927292)
+
+C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\data\decoders:
+  atom_bace1_chembl_train.pkl  (72 bytes, mtime 1790927292)
+  bond_bace1_chembl_train.pkl  (97 bytes, mtime 1790927292)
+
+======================================================================
+Mapping set suffix: bace1_chembl_train.pkl
+atom_decoder (class -> atomic number), size 14:
+  {0: 0, 1: 1, 2: 5, 3: 6, 4: 7, 5: 8, 6: 9, 7: 14, 8: 15, 9: 16, 10: 17, 11: 34, 12: 35, 13: 53}
+atom_encoder (atomic number -> class): {0: 0, 1: 1, 5: 2, 6: 3, 7: 4, 8: 5, 9: 6, 14: 7, 15: 8, 16: 9, 17: 10, 34: 11, 35: 12, 53: 13}
+  padding (Z=0) class: 0
+  C (Z=6) class: 3
+  N (Z=7) class: 4
+  O (Z=8) class: 5
+  F (Z=9) class: 6
+  S (Z=16) class: 9
+  Cl (Z=17) class: 10
+bond_decoder (class -> RDKit BondType), size 5:
+  {0: rdkit.Chem.rdchem.BondType(21), 1: rdkit.Chem.rdchem.BondType(1), 2: rdkit.Chem.rdchem.BondType(2), 3: rdkit.Chem.rdchem.BondType(3), 4: rdkit.Chem.rdchem.BondType(12)}
+  no-bond (BondType.ZERO) class: [0]
+
+data/chembl_train.smi (first 200000 lines max): usable=189430, skipped=10570
+  molecules containing oxygen: 175510 (92.65%)
+  atom counts by atomic number: {6: 3861029, 7: 575618, 8: 561310, 9: 74690, 15: 3305, 16: 65404, 17: 44017, 53: 1328}
+
+druggen_data/bace1.smi (first 200000 lines max): usable=7727, skipped=544
+  molecules containing oxygen: 7503 (97.10%)
+  atom counts by atomic number: {1: 28, 5: 8, 6: 174783, 7: 29913, 8: 19858, 9: 11087, 14: 9, 16: 2916, 17: 1480, 34: 7, 35: 483, 53: 32}
+
+======================================================================
+experiments/models/Issue3-ChemistryReadout/joint_generator.pt: 46 tensors
+  condition_layers.0.weight: (128, 3)
+  condition_layers.0.bias: (128,)
+  readout_condition.0.weight: (128, 3)
+  readout_condition.0.bias: (128,)
+  readout_e.weight: (5, 256)
+  readout_e.bias: (5,)
+  readout_n.weight: (14, 256)
+  readout_n.bias: (14,)
+
+======================================================================
+experiments/models/Issue3-Diagnostic/generator_epoch_002.pt: 44 tensors
+  condition_layers.0.weight: (128, 3)
+  condition_layers.0.bias: (128,)
+  readout_e.weight: (5, 128)
+  readout_e.bias: (5,)
+  readout_n.weight: (14, 128)
+  readout_n.bias: (14,)

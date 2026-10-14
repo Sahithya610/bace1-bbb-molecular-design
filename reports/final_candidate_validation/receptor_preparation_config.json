@@ -1,0 +1,125 @@
+{
+  "receptor_source": {
+    "pdb_id": "2B8V",
+    "structure_name": "Human BACE1 in complex with hydroxyethylene peptidomimetic inhibitor 3BN",
+    "resolution": "1.75 Angstroms",
+    "chain_used": "A"
+  },
+  "water_molecules_treatment": {
+    "total_crystallographic_waters_in_pdb": 465,
+    "protocol_applied": "Rigid receptor docking with crystallographic waters removed",
+    "flap_and_active_site_waters_identified": [
+      {
+        "water_id": "HOH_1029",
+        "coords": [
+          26.19,
+          39.48,
+          1.64
+        ],
+        "note": "Adjacent to catalytic site cleft"
+      },
+      {
+        "water_id": "HOH_1223",
+        "coords": [
+          29.48,
+          48.27,
+          2.03
+        ],
+        "note": "Interacts with 3BN cyclohexyl tail (dist 2.82 A)"
+      },
+      {
+        "water_id": "HOH_1184",
+        "coords": [
+          29.36,
+          47.46,
+          -0.93
+        ],
+        "note": "Interacts with 3BN amide region (dist 3.15 A)"
+      }
+    ],
+    "rationale": "Standard rigid-receptor AutoDock Vina v1.2.7 requires removal of non-polar hydrogens and waters unless using hydrated flexible-water protocols."
+  },
+  "catalytic_dyad_protonation_states": {
+    "aspartate_dyad_residues": [
+      "Asp32",
+      "Asp228"
+    ],
+    "inter_dyad_distance": "ASP32_OD1 to ASP228_OD1 distance = 2.922 A (shared catalytic proton bridge)",
+    "state_1_deprot": {
+      "name": "Standard Deprotonated Dyad (deprot)",
+      "description": "Default AutoDockTools lookup state where both Asp32 and Asp228 carry unprotonated carboxylates.",
+      "asp32_charges": {
+        "OD1": -0.6116,
+        "OD2": -0.6116,
+        "CG": -0.0514
+      },
+      "asp228_charges": {
+        "OD1": -0.6116,
+        "OD2": -0.6116,
+        "CG": -0.0514
+      }
+    },
+    "state_2_ash32": {
+      "name": "Asp32 Monoprotonated (ash32)",
+      "description": "Asp32 OD1 carries explicit neutral hydrogen HD1 (pointing toward Asp228 OD1 at 2.92 A bridge), leaving OD2 as carbonyl acceptor.",
+      "explicit_proton": {
+        "atom": "HD1",
+        "x": 31.398,
+        "y": 37.36,
+        "z": 6.551,
+        "charge": 0.44,
+        "type": "HD"
+      },
+      "asp32_charges": {
+        "OD1": -0.53,
+        "OD2": -0.55,
+        "CG": 0.36
+      },
+      "asp228_charges": {
+        "OD1": -0.6116,
+        "OD2": -0.6116,
+        "CG": -0.0514
+      }
+    },
+    "state_3_ash228": {
+      "name": "Asp228 Monoprotonated (ash228)",
+      "description": "Asp228 OD1 carries explicit neutral hydrogen HD1 (pointing toward Asp32 OD1 at 2.92 A bridge), leaving OD2 as carbonyl acceptor.",
+      "explicit_proton": {
+        "atom": "HD1",
+        "x": 30.464,
+        "y": 37.566,
+        "z": 6.659,
+        "charge": 0.44,
+        "type": "HD"
+      },
+      "asp32_charges": {
+        "OD1": -0.6116,
+        "OD2": -0.6116,
+        "CG": -0.0514
+      },
+      "asp228_charges": {
+        "OD1": -0.53,
+        "OD2": -0.55,
+        "CG": 0.36
+      }
+    }
+  },
+  "docking_grid_box": {
+    "definition_method": "Centroid of co-crystallized reference ligand 3BN in 2B8V",
+    "center_x": 30.65,
+    "center_y": 41.54,
+    "center_z": 1.86,
+    "size_x": 22.0,
+    "size_y": 22.0,
+    "size_z": 22.0,
+    "box_volume_A3": 10648.0
+  },
+  "docking_software_parameters": {
+    "engine": "AutoDock Vina v1.2.7",
+    "executable_path": "docking/bin/vina.exe",
+    "exhaustiveness": 8,
+    "num_modes": 5,
+    "energy_range": 3.0,
+    "random_seed": 42
+  }
+}

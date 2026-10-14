@@ -1,0 +1,7 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+1,1,1,C,True,23,0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-vg2_c10_p5/joint_generator.pt,42,C,4.7718374124115375,0.17766052368894938,0.33997565759556236
+3,1,3,CF,True,23,4,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-vg2_c10_p5/joint_generator.pt,42,CF,5.086702669560549,0.31265583344156916,0.519580738537231
+8,1,8,FC(F)F,True,27,0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-vg2_c10_p5/joint_generator.pt,42,FC(F)F,5.023482222620169,0.305368829696378,0.5098857135776552
+69,1,69,FCF,True,28,0,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-vg2_c10_p5/joint_generator.pt,42,FCF,5.127066939696004,0.30372285246202924,0.5076958162031088
+213,2,85,O,True,45,45,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-vg2_c10_p5/joint_generator.pt,42,O,4.823769054805227,0.25741773712019994,0.44608897960839405
+545,5,33,OO,True,45,45,BACE1,5.5,0.0,experiments/models/Issue3-VGated2-vg2_c10_p5/joint_generator.pt,42,OO,4.839660203869499,0.08751377194432143,0.22003953038201524

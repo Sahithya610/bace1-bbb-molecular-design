@@ -1,0 +1,16 @@
+{
+  "step_300_checkpoint_exists": false,
+  "step_300_checkpoint_note": "Training script saved only at termination (step 450). No per-step checkpoints were written.",
+  "saved_checkpoint_step": 450,
+  "saved_checkpoint_path": "experiments/models/Issue5-JointPositiveDisc-Pilot/generator_pilot.pt",
+  "checkpoint_usable": true,
+  "valid_in_test_batch": 16,
+  "independent_eval_performed": true,
+  "n_generated": 1024,
+  "n_valid_oracle_evaluated": 1,
+  "n_pic50_ge7_6576": 0,
+  "n_logBB_ge0": 0,
+  "n_both_thresholds": 0,
+  "baseline_joint_positive_rate": 0,
+  "evaluation_status": "COMPLETE"
+}

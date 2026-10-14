@@ -1,0 +1,74 @@
+{
+  "chembl_smi": "data\\chembl_train.smi",
+  "bace1_smi": "druggen_data\\bace1.smi",
+  "labels_csv": "druggen_data\\bace1_continuous_bbb.csv",
+  "data_dir": "data",
+  "output_dir": "experiments\\models\\Issue3-CriticInputFix-WarmStart-Smoke",
+  "init_generator": "experiments\\models\\Issue3-ChemistryReadout\\joint_generator.pt",
+  "init_discriminator": "experiments\\models\\Issue3-ChemistryReadout\\joint_discriminator.pt",
+  "max_atom": 45,
+  "batch_size": 8,
+  "epochs": 1,
+  "max_steps": 2,
+  "dim": 128,
+  "depth": 1,
+  "ddepth": 1,
+  "heads": 8,
+  "mlp_ratio": 3,
+  "dropout": 0.0,
+  "ddropout": 0.0,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "lambda_gp": 10.0,
+  "act": "relu",
+  "seed": 42,
+  "lambda_aux": 1.0,
+  "lambda_condition": 1.0,
+  "property_input": "st",
+  "aux_holdout_frac": 0.1,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "general_samples": 1418299,
+  "target_samples": 7682,
+  "vertexes": 45,
+  "node_dim": 14,
+  "edge_dim": 5,
+  "condition_dim": 3,
+  "condition_definition": [
+    "BACE1 target = 1.0",
+    "normalized pIC50",
+    "normalized predicted logBB"
+  ],
+  "pIC50_normalization": {
+    "mean": 6.691315,
+    "std": 1.308678
+  },
+  "BBB_normalization": {
+    "mean": -0.077873,
+    "std": 0.751623
+  },
+  "affinity_sampling": {
+    "enabled": false,
+    "method": "standard_shuffle"
+  },
+  "training_pairing": {
+    "method": "full_general_dataset_with_cycled_bace1",
+    "general_dataset_size": 1418299,
+    "bace1_dataset_size": 7682
+  },
+  "max_steps_per_epoch": 2,
+  "issue3_graph_aware_property_head": {
+    "enabled": true,
+    "head_input": "post-Transformer node + edge (condition-free)",
+    "lambda_aux": 1.0,
+    "lambda_condition": 1.0,
+    "property_input": "st",
+    "aux_holdout_frac": 0.1,
+    "aux_targets": [
+      "normalized pIC50",
+      "normalized predicted logBB"
+    ]
+  }
+}

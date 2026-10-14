@@ -1,0 +1,133 @@
+
+========================================================================
+results\issue3_chemistry_readout_generated_1024.csv  (modified 2026-10-10 20:51)
+  rows=1024  columns=['smiles', 'target', 'requested_pIC50', 'requested_logBB']
+  SMILES column 'smiles': 611 non-empty values
+  containing '*' (dummy/padding atom): 0
+  multi-fragment (contains '.'):       0
+  parse as valid molecules: 611/611  unique canonical: 611
+  molecules containing element (count, %):
+     C:   611  100.00%
+     N:   305   49.92%
+     O:   404   66.12%
+     S:    60    9.82%
+     F:   174   28.48%
+    Cl:    16    2.62%
+    Br:     0    0.00%
+     P:     0    0.00%
+     I:     0    0.00%
+  other elements present: []
+  atom totals: {'C': 12755, 'O': 1170, 'N': 855, 'S': 71, 'F': 337, 'Cl': 26}
+  heavy atoms mean/min/max: 24.90/5/44
+  mol weight mean: 345.67   mean N atoms: 1.40   mean HBD: 2.15
+  requested_pIC50: mean=8.0000 median=8.0000 min=8.0000 max=8.0000 (n=1024)
+  requested_logBB: mean=0.0000 median=0.0000 min=0.0000 max=0.0000 (n=1024)
+
+========================================================================
+results\issue3_chemistry_readout_predictions.csv  (modified 2026-10-10 20:53)
+  rows=611  columns=['smiles', 'target', 'requested_pIC50', 'requested_logBB', 'canonical_smiles', 'predicted_pIC50', 'predicted_logBB', 'normalized_predicted_logBB']
+  SMILES column 'smiles': 611 non-empty values
+  containing '*' (dummy/padding atom): 0
+  multi-fragment (contains '.'):       0
+  parse as valid molecules: 611/611  unique canonical: 611
+  molecules containing element (count, %):
+     C:   611  100.00%
+     N:   305   49.92%
+     O:   404   66.12%
+     S:    60    9.82%
+     F:   174   28.48%
+    Cl:    16    2.62%
+    Br:     0    0.00%
+     P:     0    0.00%
+     I:     0    0.00%
+  other elements present: []
+  atom totals: {'C': 12755, 'O': 1170, 'N': 855, 'S': 71, 'F': 337, 'Cl': 26}
+  heavy atoms mean/min/max: 24.90/5/44
+  mol weight mean: 345.67   mean N atoms: 1.40   mean HBD: 2.15
+  requested_pIC50: mean=8.0000 median=8.0000 min=8.0000 max=8.0000 (n=611)
+  requested_logBB: mean=0.0000 median=0.0000 min=0.0000 max=0.0000 (n=611)
+  predicted_pIC50: mean=5.4301 median=5.4128 min=4.7244 max=6.3603 (n=611)
+  predicted_logBB: mean=0.1314 median=0.1356 min=-0.6986 max=0.6167 (n=611)
+  normalized_predicted_logBB: mean=0.2784 median=0.2841 min=-0.8258 max=0.9241 (n=611)
+
+========================================================================
+results\generated_1024_joint_predictions.csv  (modified 2026-10-03 17:10)
+  rows=937  columns=['smiles', 'target', 'desired_logBB', 'normalized_logBB', 'canonical_smiles', 'predicted_pIC50', 'predicted_logBB', 'normalized_predicted_logBB']
+  SMILES column 'smiles': 937 non-empty values
+  containing '*' (dummy/padding atom): 0
+  multi-fragment (contains '.'):       0
+  parse as valid molecules: 937/937  unique canonical: 937
+  molecules containing element (count, %):
+     C:   937  100.00%
+     N:   937  100.00%
+     O:     0    0.00%
+     S:     0    0.00%
+     F:     0    0.00%
+    Cl:     0    0.00%
+    Br:     0    0.00%
+     P:     0    0.00%
+     I:     0    0.00%
+  other elements present: []
+  atom totals: {'C': 23137, 'N': 6015}
+  heavy atoms mean/min/max: 31.11/11/45
+  mol weight mean: 436.55   mean N atoms: 6.42   mean HBD: 5.86
+  desired_logBB: mean=0.0000 median=0.0000 min=0.0000 max=0.0000 (n=937)
+  normalized_logBB: mean=0.1036 median=0.1036 min=0.1036 max=0.1036 (n=937)
+  predicted_pIC50: mean=5.6408 median=5.6507 min=4.8467 max=6.1061 (n=937)
+  predicted_logBB: mean=0.2549 median=0.2581 min=-0.0968 max=0.5327 (n=937)
+  normalized_predicted_logBB: mean=0.4427 median=0.4470 min=-0.0252 max=0.8124 (n=937)
+
+========================================================================
+results\generated_1024_logBB0.csv  (modified 2026-10-02 14:51)
+  rows=1024  columns=['smiles', 'target', 'desired_logBB', 'normalized_logBB']
+  SMILES column 'smiles': 1024 non-empty values
+  containing '*' (dummy/padding atom): 0
+  multi-fragment (contains '.'):       0
+  parse as valid molecules: 1024/1024  unique canonical: 937
+  molecules containing element (count, %):
+     C:  1024  100.00%
+     N:  1024  100.00%
+     O:     0    0.00%
+     S:     0    0.00%
+     F:     0    0.00%
+    Cl:     0    0.00%
+    Br:     0    0.00%
+     P:     0    0.00%
+     I:     0    0.00%
+  other elements present: []
+  atom totals: {'C': 25277, 'N': 6563}
+  heavy atoms mean/min/max: 31.09/11/45
+  mol weight mean: 436.28   mean N atoms: 6.41   mean HBD: 5.84
+  desired_logBB: mean=0.0000 median=0.0000 min=0.0000 max=0.0000 (n=1024)
+  normalized_logBB: mean=0.1036 median=0.1036 min=0.1036 max=0.1036 (n=1024)
+
+========================================================================
+results\issue2_condition_consistency_generated_1024.csv  (modified 2026-10-06 10:15)
+  rows=1024  columns=['smiles', 'target', 'desired_pIC50', 'normalized_pIC50', 'desired_logBB', 'normalized_logBB']
+  SMILES column 'smiles': 368 non-empty values
+  containing '*' (dummy/padding atom): 0
+  multi-fragment (contains '.'):       0
+  parse as valid molecules: 368/368  unique canonical: 368
+  molecules containing element (count, %):
+     C:   368  100.00%
+     N:   209   56.79%
+     O:   198   53.80%
+     S:    56   15.22%
+     F:    90   24.46%
+    Cl:    17    4.62%
+    Br:     0    0.00%
+     P:     0    0.00%
+     I:     0    0.00%
+  other elements present: []
+  atom totals: {'C': 8357, 'N': 708, 'O': 710, 'F': 230, 'S': 68, 'Cl': 21}
+  heavy atoms mean/min/max: 27.43/10/45
+  mol weight mean: 378.92   mean N atoms: 1.92   mean HBD: 1.62
+  desired_pIC50: mean=8.0000 median=8.0000 min=8.0000 max=8.0000 (n=1024)
+  normalized_pIC50: mean=1.0000 median=1.0000 min=1.0000 max=1.0000 (n=1024)
+  desired_logBB: mean=0.0000 median=0.0000 min=0.0000 max=0.0000 (n=1024)
+  normalized_logBB: mean=0.1036 median=0.1036 min=0.1036 max=0.1036 (n=1024)
+
+========================================================================
+Canonical-SMILES overlap between files (lineage check):
+    611 shared | issue3_chemistry_readout_generated_1024.csv (611) vs issue3_chemistry_readout_predictions.csv (611)
+    937 shared | generated_1024_joint_predictions.csv (937) vs generated_1024_logBB0.csv (937)

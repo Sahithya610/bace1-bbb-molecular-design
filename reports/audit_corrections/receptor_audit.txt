@@ -1,0 +1,29 @@
+RECEPTOR AUDIT — Phase 4A
+======================================================================
+
+Crystal structure: docking/2B8V.pdb
+  HETATM records chain A: 503
+  3BN ligand HETATM records: 38
+  3BN centroid: (30.65, 41.54, 1.86)
+
+Cleaned receptor: docking/bace1_receptor.pdb
+  ATOM records (chain A): 2939
+  Expected (reported): 2939 — actual: 2939
+  ASP32 present: YES (8 atoms)
+  ASP228 present: YES (8 atoms)
+
+Docking box: docking/bace1_box.json
+  Center: (30.65, 41.54, 1.86)
+  Size: 22.0 x 22.0 x 22.0 A
+  Distance from box center to 3BN centroid: (0.00,0.00,0.00) A
+
+Receptor PDBQT format (first 3 lines):
+  ATOM      1  N   ARG A  43P     43.052  47.134  37.943  1.00120.63    -0.4157  N
+  ATOM      2  CA  ARG A  43P     42.687  47.257  36.503  1.00119.96    -0.0514  C
+  ATOM      3  C   ARG A  43P     43.395  46.192  35.673  1.00116.63    -0.0662  C
+
+PDBQT preparation method:
+  Charges: AD4 atom-type lookup table (NOT Gasteiger/MMFF computed)
+  Protonation: NOT performed (no HTMD/MGLTools)
+  Catalytic ASP32/ASP228: present but protonation state undefined
+  Waters/cofactors: REMOVED

@@ -1,0 +1,475 @@
+========================================================================
+LAMBDA_CONDITION SWEEP  (500 steps, ET-distill, warm-start)
+========================================================================
+Lambdas: [1.0, 5.0, 10.0, 20.0]
+Baseline: experiments/models/Issue3-ChemistryReadout/joint_generator.pt
+
+
+========================================================================
+λ_condition = 1.0  →  experiments/models/Issue3-LambdaSweep-lam1
+========================================================================
+Training 500 steps …
+ET prediction lookup loaded: 8,271 molecules
+======================================================================
+DrugGEN: ExtraTrees-Distilled Property Head
+======================================================================
+Device: cuda
+GPU: NVIDIA RTX 2000 Ada Generation
+Loaded existing encoders/decoders!
+Condition records loaded: 8,272
+Canonical condition records: 8,271
+Invalid condition SMILES: 0
+
+----------------------------------------------------------------------
+CONDITION ALIGNMENT VERIFIED
+----------------------------------------------------------------------
+DrugGEN graphs:       7,682
+Matched graphs:       7,682
+Missing conditions:   0
+Condition dimension:  3
+Condition definition:
+  [BACE1=1, normalized pIC50, normalized predicted logBB]
+
+pIC50 normalization: mean=6.691315, std=1.308678
+logBB normalization: mean=-0.077873, std=0.751623
+General graphs : 1,418,299
+BACE1 graphs   : 7,682
+atom_dim=14  bond_dim=5  max_atoms=45
+Loaded generator from: experiments\models\Issue3-ChemistryReadout\joint_generator.pt
+Loaded discriminator from: experiments\models\Issue3-ChemistryReadout\joint_discriminator.pt
+
+{
+  "chembl_smi": "data/chembl_train.smi",
+  "bace1_smi": "druggen_data/bace1.smi",
+  "labels_csv": "druggen_data/bace1_continuous_bbb.csv",
+  "et_labels": "druggen_data/bace1_et_predictions.csv",
+  "data_dir": "data",
+  "output_dir": "experiments/models/Issue3-LambdaSweep-lam1",
+  "init_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "init_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "max_atom": 45,
+  "batch_size": 32,
+  "epochs": 1,
+  "max_steps": 500,
+  "dim": 128,
+  "depth": 1,
+  "ddepth": 1,
+  "heads": 8,
+  "mlp_ratio": 3,
+  "dropout": 0.0,
+  "ddropout": 0.0,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 1.0,
+  "property_input": "st",
+  "aux_holdout_frac": 0.1,
+  "act": "relu",
+  "seed": 1,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "general_samples": 1418299,
+  "target_samples": 7682,
+  "vertexes": 45,
+  "node_dim": 14,
+  "edge_dim": 5,
+  "condition_dim": 3,
+  "et_lookup_size": 8271,
+  "pIC50_normalization": {
+    "mean": 6.691315,
+    "std": 1.308678
+  },
+  "BBB_normalization": {
+    "mean": -0.077873,
+    "std": 0.751623
+  },
+  "change_from_baseline": "Auxiliary property head supervised by ExtraTrees predicted pIC50 instead of raw training-CSV pIC50.  LogBB target unchanged.  All other losses, architecture, and data pipeline identical to train_joint.py (Issue3-ChemistryReadout baseline)."
+}
+C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\.venv\Lib\site-packages\torch\autograd\graph.py:869: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\cuda\CublasHandlePool.cpp:335.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch 001/1 | G=13.3813 | D=-5.8039 | Aux=0.1006 | Cond=0.8596 | Steps=500 | ET-hit=16000 ET-miss=0
+    head train MSE : pIC50=0.1830  logBB=0.0182  (target = ET pred pIC50)
+    head HELD-OUT R²: pIC50=0.683  logBB=0.544  (n=1616, vs ET pred target)
+    G->head cond MSE: pIC50=1.6160  logBB=0.1032
+    corr(requested, head-reading-of-generated): pIC50=0.364  logBB=0.160
+
+======================================================================
+TRAINING COMPLETE
+======================================================================
+Saved generator:     experiments\models\Issue3-LambdaSweep-lam1\joint_generator.pt
+Saved discriminator: experiments\models\Issue3-LambdaSweep-lam1\joint_discriminator.pt
+  ✓ Checkpoint saved: experiments/models/Issue3-LambdaSweep-lam1/joint_generator.pt
+  Generating at pIC50=5.5 …
+    ✓ 1024 molecules → results/lambda_sweep_lam1_cond55.csv
+  Generating at pIC50=8.0 …
+    ✓ 1024 molecules → results/lambda_sweep_lam1_cond80.csv
+  Predicting results/lambda_sweep_lam1_cond55.csv …
+    ✓ 189 predictions → results/lambda_sweep_lam1_cond55_pred.csv
+  Predicting results/lambda_sweep_lam1_cond80.csv …
+    ✓ 305 predictions → results/lambda_sweep_lam1_cond80_pred.csv
+
+  λ=   1  μ_lo=5.409(n=189)  μ_hi=5.475(n=305)  Δμ=+0.066  ✗ FAIL
+
+========================================================================
+λ_condition = 5.0  →  experiments/models/Issue3-LambdaSweep-lam5
+========================================================================
+Training 500 steps …
+ET prediction lookup loaded: 8,271 molecules
+======================================================================
+DrugGEN: ExtraTrees-Distilled Property Head
+======================================================================
+Device: cuda
+GPU: NVIDIA RTX 2000 Ada Generation
+Loaded existing encoders/decoders!
+Condition records loaded: 8,272
+Canonical condition records: 8,271
+Invalid condition SMILES: 0
+
+----------------------------------------------------------------------
+CONDITION ALIGNMENT VERIFIED
+----------------------------------------------------------------------
+DrugGEN graphs:       7,682
+Matched graphs:       7,682
+Missing conditions:   0
+Condition dimension:  3
+Condition definition:
+  [BACE1=1, normalized pIC50, normalized predicted logBB]
+
+pIC50 normalization: mean=6.691315, std=1.308678
+logBB normalization: mean=-0.077873, std=0.751623
+General graphs : 1,418,299
+BACE1 graphs   : 7,682
+atom_dim=14  bond_dim=5  max_atoms=45
+Loaded generator from: experiments\models\Issue3-ChemistryReadout\joint_generator.pt
+Loaded discriminator from: experiments\models\Issue3-ChemistryReadout\joint_discriminator.pt
+
+{
+  "chembl_smi": "data/chembl_train.smi",
+  "bace1_smi": "druggen_data/bace1.smi",
+  "labels_csv": "druggen_data/bace1_continuous_bbb.csv",
+  "et_labels": "druggen_data/bace1_et_predictions.csv",
+  "data_dir": "data",
+  "output_dir": "experiments/models/Issue3-LambdaSweep-lam5",
+  "init_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "init_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "max_atom": 45,
+  "batch_size": 32,
+  "epochs": 1,
+  "max_steps": 500,
+  "dim": 128,
+  "depth": 1,
+  "ddepth": 1,
+  "heads": 8,
+  "mlp_ratio": 3,
+  "dropout": 0.0,
+  "ddropout": 0.0,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 5.0,
+  "property_input": "st",
+  "aux_holdout_frac": 0.1,
+  "act": "relu",
+  "seed": 1,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "general_samples": 1418299,
+  "target_samples": 7682,
+  "vertexes": 45,
+  "node_dim": 14,
+  "edge_dim": 5,
+  "condition_dim": 3,
+  "et_lookup_size": 8271,
+  "pIC50_normalization": {
+    "mean": 6.691315,
+    "std": 1.308678
+  },
+  "BBB_normalization": {
+    "mean": -0.077873,
+    "std": 0.751623
+  },
+  "change_from_baseline": "Auxiliary property head supervised by ExtraTrees predicted pIC50 instead of raw training-CSV pIC50.  LogBB target unchanged.  All other losses, architecture, and data pipeline identical to train_joint.py (Issue3-ChemistryReadout baseline)."
+}
+Epoch 001/1 | G=18.1021 | D=-7.8177 | Aux=0.1005 | Cond=0.5762 | Steps=500 | ET-hit=16000 ET-miss=0
+    head train MSE : pIC50=0.1828  logBB=0.0182  (target = ET pred pIC50)
+    head HELD-OUT R²: pIC50=0.685  logBB=0.547  (n=1616, vs ET pred target)
+    G->head cond MSE: pIC50=1.0472  logBB=0.1052
+    corr(requested, head-reading-of-generated): pIC50=0.496  logBB=0.107
+
+======================================================================
+TRAINING COMPLETE
+======================================================================
+Saved generator:     experiments\models\Issue3-LambdaSweep-lam5\joint_generator.pt
+Saved discriminator: experiments\models\Issue3-LambdaSweep-lam5\joint_discriminator.pt
+  ✓ Checkpoint saved: experiments/models/Issue3-LambdaSweep-lam5/joint_generator.pt
+  Generating at pIC50=5.5 …
+    ✓ 1024 molecules → results/lambda_sweep_lam5_cond55.csv
+  Generating at pIC50=8.0 …
+    ✓ 1024 molecules → results/lambda_sweep_lam5_cond80.csv
+  Predicting results/lambda_sweep_lam5_cond55.csv …
+    ✓ 655 predictions → results/lambda_sweep_lam5_cond55_pred.csv
+  Predicting results/lambda_sweep_lam5_cond80.csv …
+    ✗ Prediction failed (code 1)
+e 143, in main
+    X = np.vstack(X_list).astype(np.float32)
+        ~~~~~~~~~^^^^^^^^
+  File "C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\.venv\Lib\site-packages\numpy\_core\shape_base.py", line 290, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+
+  ✗ Δ computation failed: [Errno 2] No such file or directory: 'results/lambda_sweep_lam5_cond80_pred.csv'
+
+========================================================================
+λ_condition = 10.0  →  experiments/models/Issue3-LambdaSweep-lam10
+========================================================================
+Training 500 steps …
+ET prediction lookup loaded: 8,271 molecules
+======================================================================
+DrugGEN: ExtraTrees-Distilled Property Head
+======================================================================
+Device: cuda
+GPU: NVIDIA RTX 2000 Ada Generation
+Loaded existing encoders/decoders!
+Condition records loaded: 8,272
+Canonical condition records: 8,271
+Invalid condition SMILES: 0
+
+----------------------------------------------------------------------
+CONDITION ALIGNMENT VERIFIED
+----------------------------------------------------------------------
+DrugGEN graphs:       7,682
+Matched graphs:       7,682
+Missing conditions:   0
+Condition dimension:  3
+Condition definition:
+  [BACE1=1, normalized pIC50, normalized predicted logBB]
+
+pIC50 normalization: mean=6.691315, std=1.308678
+logBB normalization: mean=-0.077873, std=0.751623
+General graphs : 1,418,299
+BACE1 graphs   : 7,682
+atom_dim=14  bond_dim=5  max_atoms=45
+Loaded generator from: experiments\models\Issue3-ChemistryReadout\joint_generator.pt
+Loaded discriminator from: experiments\models\Issue3-ChemistryReadout\joint_discriminator.pt
+
+{
+  "chembl_smi": "data/chembl_train.smi",
+  "bace1_smi": "druggen_data/bace1.smi",
+  "labels_csv": "druggen_data/bace1_continuous_bbb.csv",
+  "et_labels": "druggen_data/bace1_et_predictions.csv",
+  "data_dir": "data",
+  "output_dir": "experiments/models/Issue3-LambdaSweep-lam10",
+  "init_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "init_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "max_atom": 45,
+  "batch_size": 32,
+  "epochs": 1,
+  "max_steps": 500,
+  "dim": 128,
+  "depth": 1,
+  "ddepth": 1,
+  "heads": 8,
+  "mlp_ratio": 3,
+  "dropout": 0.0,
+  "ddropout": 0.0,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 10.0,
+  "property_input": "st",
+  "aux_holdout_frac": 0.1,
+  "act": "relu",
+  "seed": 1,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "general_samples": 1418299,
+  "target_samples": 7682,
+  "vertexes": 45,
+  "node_dim": 14,
+  "edge_dim": 5,
+  "condition_dim": 3,
+  "et_lookup_size": 8271,
+  "pIC50_normalization": {
+    "mean": 6.691315,
+    "std": 1.308678
+  },
+  "BBB_normalization": {
+    "mean": -0.077873,
+    "std": 0.751623
+  },
+  "change_from_baseline": "Auxiliary property head supervised by ExtraTrees predicted pIC50 instead of raw training-CSV pIC50.  LogBB target unchanged.  All other losses, architecture, and data pipeline identical to train_joint.py (Issue3-ChemistryReadout baseline)."
+}
+Epoch 001/1 | G=21.8235 | D=-9.5278 | Aux=0.1005 | Cond=0.5023 | Steps=500 | ET-hit=16000 ET-miss=0
+    head train MSE : pIC50=0.1828  logBB=0.0183  (target = ET pred pIC50)
+    head HELD-OUT R²: pIC50=0.685  logBB=0.546  (n=1616, vs ET pred target)
+    G->head cond MSE: pIC50=0.9260  logBB=0.0785
+    corr(requested, head-reading-of-generated): pIC50=0.557  logBB=0.174
+
+======================================================================
+TRAINING COMPLETE
+======================================================================
+Saved generator:     experiments\models\Issue3-LambdaSweep-lam10\joint_generator.pt
+Saved discriminator: experiments\models\Issue3-LambdaSweep-lam10\joint_discriminator.pt
+  ✓ Checkpoint saved: experiments/models/Issue3-LambdaSweep-lam10/joint_generator.pt
+  Generating at pIC50=5.5 …
+    ✓ 1024 molecules → results/lambda_sweep_lam10_cond55.csv
+  Generating at pIC50=8.0 …
+    ✓ 1024 molecules → results/lambda_sweep_lam10_cond80.csv
+  Predicting results/lambda_sweep_lam10_cond55.csv …
+    ✓ 492 predictions → results/lambda_sweep_lam10_cond55_pred.csv
+  Predicting results/lambda_sweep_lam10_cond80.csv …
+    ✗ Prediction failed (code 1)
+e 143, in main
+    X = np.vstack(X_list).astype(np.float32)
+        ~~~~~~~~~^^^^^^^^
+  File "C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\.venv\Lib\site-packages\numpy\_core\shape_base.py", line 290, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+
+  ✗ Δ computation failed: [Errno 2] No such file or directory: 'results/lambda_sweep_lam10_cond80_pred.csv'
+
+========================================================================
+λ_condition = 20.0  →  experiments/models/Issue3-LambdaSweep-lam20
+========================================================================
+Training 500 steps …
+ET prediction lookup loaded: 8,271 molecules
+======================================================================
+DrugGEN: ExtraTrees-Distilled Property Head
+======================================================================
+Device: cuda
+GPU: NVIDIA RTX 2000 Ada Generation
+Loaded existing encoders/decoders!
+Condition records loaded: 8,272
+Canonical condition records: 8,271
+Invalid condition SMILES: 0
+
+----------------------------------------------------------------------
+CONDITION ALIGNMENT VERIFIED
+----------------------------------------------------------------------
+DrugGEN graphs:       7,682
+Matched graphs:       7,682
+Missing conditions:   0
+Condition dimension:  3
+Condition definition:
+  [BACE1=1, normalized pIC50, normalized predicted logBB]
+
+pIC50 normalization: mean=6.691315, std=1.308678
+logBB normalization: mean=-0.077873, std=0.751623
+General graphs : 1,418,299
+BACE1 graphs   : 7,682
+atom_dim=14  bond_dim=5  max_atoms=45
+Loaded generator from: experiments\models\Issue3-ChemistryReadout\joint_generator.pt
+Loaded discriminator from: experiments\models\Issue3-ChemistryReadout\joint_discriminator.pt
+
+{
+  "chembl_smi": "data/chembl_train.smi",
+  "bace1_smi": "druggen_data/bace1.smi",
+  "labels_csv": "druggen_data/bace1_continuous_bbb.csv",
+  "et_labels": "druggen_data/bace1_et_predictions.csv",
+  "data_dir": "data",
+  "output_dir": "experiments/models/Issue3-LambdaSweep-lam20",
+  "init_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "init_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt",
+  "max_atom": 45,
+  "batch_size": 32,
+  "epochs": 1,
+  "max_steps": 500,
+  "dim": 128,
+  "depth": 1,
+  "ddepth": 1,
+  "heads": 8,
+  "mlp_ratio": 3,
+  "dropout": 0.0,
+  "ddropout": 0.0,
+  "g_lr": 1e-05,
+  "d_lr": 1e-05,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "lambda_gp": 10.0,
+  "lambda_aux": 1.0,
+  "lambda_condition": 20.0,
+  "property_input": "st",
+  "aux_holdout_frac": 0.1,
+  "act": "relu",
+  "seed": 1,
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "general_samples": 1418299,
+  "target_samples": 7682,
+  "vertexes": 45,
+  "node_dim": 14,
+  "edge_dim": 5,
+  "condition_dim": 3,
+  "et_lookup_size": 8271,
+  "pIC50_normalization": {
+    "mean": 6.691315,
+    "std": 1.308678
+  },
+  "BBB_normalization": {
+    "mean": -0.077873,
+    "std": 0.751623
+  },
+  "change_from_baseline": "Auxiliary property head supervised by ExtraTrees predicted pIC50 instead of raw training-CSV pIC50.  LogBB target unchanged.  All other losses, architecture, and data pipeline identical to train_joint.py (Issue3-ChemistryReadout baseline)."
+}
+Epoch 001/1 | G=29.5896 | D=-11.8872 | Aux=0.1010 | Cond=0.5552 | Steps=500 | ET-hit=16000 ET-miss=0
+    head train MSE : pIC50=0.1837  logBB=0.0183  (target = ET pred pIC50)
+    head HELD-OUT R²: pIC50=0.685  logBB=0.542  (n=1616, vs ET pred target)
+    G->head cond MSE: pIC50=1.0346  logBB=0.0759
+    corr(requested, head-reading-of-generated): pIC50=0.469  logBB=0.103
+
+======================================================================
+TRAINING COMPLETE
+======================================================================
+Saved generator:     experiments\models\Issue3-LambdaSweep-lam20\joint_generator.pt
+Saved discriminator: experiments\models\Issue3-LambdaSweep-lam20\joint_discriminator.pt
+  ✓ Checkpoint saved: experiments/models/Issue3-LambdaSweep-lam20/joint_generator.pt
+  Generating at pIC50=5.5 …
+    ✓ 1024 molecules → results/lambda_sweep_lam20_cond55.csv
+  Generating at pIC50=8.0 …
+    ✓ 1024 molecules → results/lambda_sweep_lam20_cond80.csv
+  Predicting results/lambda_sweep_lam20_cond55.csv …
+    ✗ Prediction failed (code 1)
+e 143, in main
+    X = np.vstack(X_list).astype(np.float32)
+        ~~~~~~~~~^^^^^^^^
+  File "C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\.venv\Lib\site-packages\numpy\_core\shape_base.py", line 290, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+
+  Predicting results/lambda_sweep_lam20_cond80.csv …
+    ✗ Prediction failed (code 1)
+e 143, in main
+    X = np.vstack(X_list).astype(np.float32)
+        ~~~~~~~~~^^^^^^^^
+  File "C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\.venv\Lib\site-packages\numpy\_core\shape_base.py", line 290, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: need at least one array to concatenate
+
+  ✗ Δ computation failed: [Errno 2] No such file or directory: 'results/lambda_sweep_lam20_cond55_pred.csv'
+
+
+========================================================================
+SWEEP SUMMARY
+========================================================================
+    λ_cond    n_lo    μ_lo    n_hi    μ_hi       Δμ    Result
+  ------------------------------------------------------------
+       1.0     189   5.409     305   5.475   +0.066    FAIL ✗
+       5.0  ERROR: [Errno 2] No such file or directory: 'results/lambda_sweep_lam5_cond80_pred.csv'
+      10.0  ERROR: [Errno 2] No such file or directory: 'results/lambda_sweep_lam10_cond80_pred.csv'
+      20.0  ERROR: [Errno 2] No such file or directory: 'results/lambda_sweep_lam20_cond55_pred.csv'
+
+Full results: lambda_sweep_results.csv
+Log:          lambda_sweep_results.txt

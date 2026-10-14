@@ -1,0 +1,120 @@
+# ==============================================================================
+# DrugGEN .gitignore
+# Machine learning, cheminformatics, and molecular docking repository
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Secrets and Local Environment
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# ------------------------------------------------------------------------------
+# 2. Python Environment and Bytecode
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# ------------------------------------------------------------------------------
+# 3. Jupyter Notebooks
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------------------------
+# 4. Editors and Operating System Artifacts
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.agents/
+
+# ------------------------------------------------------------------------------
+# 5. Logs, Diagnostics, and Temporary Files
+# ------------------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+tmp_*.py
+surrogate_training_log.txt
+pilot_*_log.txt
+vgated*log*.txt
+vgated*.txt
+reinforce_*_log.txt
+et_distill_*_log.txt
+lambda_sweep_*_log.txt
+*out.txt
+*err*.txt
+*run_output.txt
+analyze_generation_output.txt
+predict_*log*.txt
+results/predict_*.txt
+do_commit.ps1
+
+# ------------------------------------------------------------------------------
+# 6. Machine Learning Experiment & Run State
+# ------------------------------------------------------------------------------
+.cache/
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+
+# ------------------------------------------------------------------------------
+# 7. Model Checkpoints & Large Estimators (Preserve JSON manifests/metadata)
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.joblib
+*.pkl
+*.bin
+
+# ------------------------------------------------------------------------------
+# 8. Large Datasets & Binary Graph Caches (> 10 MB - 5.5 GB)
+# ------------------------------------------------------------------------------
+# ChEMBL large preprocessed PyG graph tensor (5.47 GB - exceeds GitHub limit)
+data/chembl_train45.pt
+data/chembl_train.smi
+# Preprocessed PyG graph tensors (regenerated via preprocess_druggen.py)
+druggen_data/*45.pt
+# External B3DB compressed TSV archives
+B3DB/B3DB/*.tsv.gz
+# Compressed archives
+*.zip
+*.tar.gz
+*.tgz
+
+# ------------------------------------------------------------------------------
+# 9. Large 50k Screening Raw Dumps (Preserve master & ranked candidate tables)
+# ------------------------------------------------------------------------------
+results/baseline_screen_50000_predictions.csv
+results/baseline_screen_50000_generated.csv
+
+# ------------------------------------------------------------------------------
+# 10. Docking Executables & Temporary Poses
+# ------------------------------------------------------------------------------
+docking/bin/
+docking/debug_*
+docking/poses/
+docking/ligands/

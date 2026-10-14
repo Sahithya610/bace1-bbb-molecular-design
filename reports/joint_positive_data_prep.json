@@ -1,0 +1,20 @@
+{
+  "status": "OK",
+  "total_in_csv": 8272,
+  "n_pic50_ge7_6576": 2052,
+  "n_logBB_ge0": 1093,
+  "n_joint_positive_raw": 234,
+  "n_joint_positive_unique_canonical": 234,
+  "n_joint_positive_with_graph": 234,
+  "graph_file_used": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\druggen_data\\bace145.pt",
+  "n_train": 187,
+  "n_heldout": 47,
+  "split_strategy": "scaffold_80_20",
+  "scaffold_overlap_train_heldout": 0,
+  "exact_overlap_train_heldout": 0,
+  "n_duplicates_in_csv": 0,
+  "bbb_label_source": "B3DB ExtraTrees model predictions, test R2=0.354, NOT experimental",
+  "pic50_label_source": "ChEMBL experimental IC50, formula 9-log10(IC50_nM)",
+  "pic50_threshold": 7.6576,
+  "logBB_threshold": 0.0
+}

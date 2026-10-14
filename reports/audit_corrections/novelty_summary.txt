@@ -1,0 +1,22 @@
+NOVELTY SUMMARY -- TOP 200 CANDIDATES
+==================================================
+Total candidates analysed      : 200
+Unique Murcko scaffolds        : 186  (expected ~186)
+Mean pairwise Tanimoto (ECFP4) : 0.1463  (expected ~0.146)
+Exact training duplicates      : 3  (Tc >= 0.999)
+Mean max_training_Tc           : 0.3039
+Median max_training_Tc         : 0.2489
+Max max_training_Tc            : 1.0000
+
+BBB MODEL CAVEATS:
+  - predicted_logBB in bace1_continuous_bbb.csv is from a BBB regression model
+    (ExtraTrees, trained on B3DB experimental logBB), NOT direct experimental data.
+  - BBB predictions on generated molecules are predictions-of-predictions.
+  - BBB model scaffold-split test R2=0.354; generalization on novel scaffolds UNVERIFIED.
+
+ORACLE MODEL CAVEATS:
+  - RMSE=0.755 is a typical error statistic, NOT a calibrated 95% prediction interval.
+  - Training-set Pearson r (~0.901) is in-sample fit; external accuracy = R2=0.6156.
+  - Generated molecules may be outside the oracle's applicability domain.
+  - Fraction of training molecules with pIC50 >= 7.0    : 0.4437 (3670/8271)
+  - Fraction of training molecules with pIC50 >= 7.6576: 0.2480 (2051/8271)

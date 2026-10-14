@@ -1,0 +1,123 @@
+{
+  "experiment": "Issue5-JointPositive-Checkpointed",
+  "created_at": "2026-10-14T09:31:12",
+  "config": {
+    "chembl_smi": "data/chembl_train.smi",
+    "bace1_smi": "druggen_data/bace1.smi",
+    "joint_positive_smi": "druggen_data/bace1_joint_positive_train.smi",
+    "output_dir": "experiments/models/Issue5-JointPositive-Checkpointed/",
+    "batch_size": 32,
+    "max_steps": 500,
+    "checkpoint_interval": 50,
+    "g_lr": 1e-05,
+    "d_lr": 1e-05,
+    "lambda_gp": 10.0,
+    "lambda_aux": 1.0,
+    "clip_grad_norm": 0.0,
+    "seed": 1,
+    "init_generator": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+    "init_discriminator": "experiments/models/Issue3-ChemistryReadout/joint_discriminator.pt"
+  },
+  "checkpoints": [
+    {
+      "step": 50,
+      "label": "step_50",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_50.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_50.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_50.pt",
+      "timestamp": "2026-10-14T09:31:24",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 100,
+      "label": "step_100",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_100.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_100.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_100.pt",
+      "timestamp": "2026-10-14T09:31:33",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 150,
+      "label": "step_150",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_150.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_150.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_150.pt",
+      "timestamp": "2026-10-14T09:31:41",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 200,
+      "label": "step_200",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_200.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_200.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_200.pt",
+      "timestamp": "2026-10-14T09:31:50",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 250,
+      "label": "step_250",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_250.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_250.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_250.pt",
+      "timestamp": "2026-10-14T09:31:59",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 300,
+      "label": "step_300",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_300.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_300.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_300.pt",
+      "timestamp": "2026-10-14T09:32:07",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 350,
+      "label": "step_350",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_350.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_350.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_350.pt",
+      "timestamp": "2026-10-14T09:32:16",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 400,
+      "label": "step_400",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_400.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_400.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_400.pt",
+      "timestamp": "2026-10-14T09:32:25",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 450,
+      "label": "step_450",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_step_450.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_450.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_step_450.pt",
+      "timestamp": "2026-10-14T09:32:33",
+      "verified": true,
+      "is_final": false
+    },
+    {
+      "step": 450,
+      "label": "final",
+      "checkpoint_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\checkpoint_final.pt",
+      "generator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_final.pt",
+      "discriminator_file": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\discriminator_final.pt",
+      "timestamp": "2026-10-14T09:32:34",
+      "verified": true,
+      "is_final": true
+    }
+  ]
+}

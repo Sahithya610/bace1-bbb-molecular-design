@@ -1,0 +1,153 @@
+BACE1 CANDIDATE VALIDATION REPORT
+======================================================================
+
+Disclaimer: ALL values are computational predictions.
+Wet-lab synthesis + assay required before any real-world use.
+
+Dual-success criteria: BBB-positive (logBB>=0) AND Vina<=-7.5 kcal/mol
+Candidates evaluated: 11
+
+CLEAN (no PAINS/Brenk/reactive alerts): 2
+Flagged: 9
+
+======================================================================
+Candidate 1  [CLEAN]
+  Oracle pIC50:  6.169  (predicted, r=0.901)
+  Vina score:    -8.03 kcal/mol (simplified receptor)
+  logBB:         +0.023  (predicted BBB permeability)
+  QED:           0.643  (0=least drug-like, 1=most)
+  MW=426  LogP=3.99  TPSA=71  HBD=1  HBA=6
+  RotBonds=6  Stereocenters=3
+  LogS(ESOL)=-6.82 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.16
+  SMILES: CC1CCC(COc2ccc(F)cn2)CN1C(O)c1cc(F)ccc1-c1ncccn1
+
+======================================================================
+Candidate 2  [CLEAN (low QED)]
+  Oracle pIC50:  6.118  (predicted, r=0.901)
+  Vina score:    -9.68 kcal/mol (simplified receptor)
+  logBB:         +0.090  (predicted BBB permeability)
+  QED:           0.466  (0=least drug-like, 1=most)
+  MW=434  LogP=3.25  TPSA=82  HBD=4  HBA=5
+  RotBonds=2  Stereocenters=3
+  LogS(ESOL)=-6.67 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.20
+  SMILES: OC1CC2(c3cc(F)ccc3NC2O)c2cnn(Cc3ccc(C(F)(F)F)cc3)c2N1
+
+======================================================================
+Candidate 3  [REACTIVE GROUP]
+  Oracle pIC50:  6.521  (predicted, r=0.901)
+  Vina score:    -8.05 kcal/mol (simplified receptor)
+  logBB:         +0.056  (predicted BBB permeability)
+  QED:           0.830  (0=least drug-like, 1=most)
+  MW=350  LogP=4.83  TPSA=38  HBD=1  HBA=3
+  RotBonds=2  Stereocenters=3
+  LogS(ESOL)=-5.66 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.29
+  Reactive groups: Imine_reactive
+  SMILES: NC1=NC2(c3ccc(F)cc3F)CCC(C3CCCC3)CC2CS1
+
+======================================================================
+Candidate 4  [REACTIVE GROUP]
+  Oracle pIC50:  6.182  (predicted, r=0.901)
+  Vina score:    -8.05 kcal/mol (simplified receptor)
+  logBB:         +0.055  (predicted BBB permeability)
+  QED:           0.745  (0=least drug-like, 1=most)
+  MW=397  LogP=4.11  TPSA=69  HBD=2  HBA=5
+  RotBonds=5  Stereocenters=1
+  LogS(ESOL)=-6.04 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.23
+  Reactive groups: Imine_reactive
+  SMILES: CC1(c2cc(Nc3ccccc3OCC(F)(F)F)ccc2F)COCC(N)=N1
+
+======================================================================
+Candidate 5  [BRENK ALERT]
+  Oracle pIC50:  6.242  (predicted, r=0.901)
+  Vina score:    -8.01 kcal/mol (simplified receptor)
+  logBB:         +0.158  (predicted BBB permeability)
+  QED:           0.612  (0=least drug-like, 1=most)
+  MW=406  LogP=3.75  TPSA=69  HBD=3  HBA=5
+  RotBonds=7  Stereocenters=2
+  LogS(ESOL)=-5.74 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.12
+  Brenk alerts:    het-C-het_not_in_ring
+  SMILES: CCC(Nc1cc(CN2CCC(C)(C(O)O)C2)c(F)cn1)c1ccc(F)c(C)c1
+
+======================================================================
+Candidate 6  [BRENK ALERT]
+  Oracle pIC50:  6.149  (predicted, r=0.901)
+  Vina score:    -8.33 kcal/mol (simplified receptor)
+  logBB:         +0.149  (predicted BBB permeability)
+  QED:           0.596  (0=least drug-like, 1=most)
+  MW=460  LogP=2.69  TPSA=76  HBD=3  HBA=6
+  RotBonds=5  Stereocenters=7
+  LogS(ESOL)=-5.54 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.14
+  Brenk alerts:    het-C-het_not_in_ring
+  SMILES: CCN1C(O)C2C(c3ccc(-c4ccc(F)c(F)c4)cc3)N3CCCC3(C(O)OC)C2C1O
+
+======================================================================
+Candidate 7  [BRENK ALERT]
+  Oracle pIC50:  6.181  (predicted, r=0.901)
+  Vina score:    -7.97 kcal/mol (simplified receptor)
+  logBB:         +0.347  (predicted BBB permeability)
+  QED:           0.535  (0=least drug-like, 1=most)
+  MW=425  LogP=3.23  TPSA=82  HBD=4  HBA=5
+  RotBonds=6  Stereocenters=2
+  LogS(ESOL)=-5.6 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.18
+  Brenk alerts:    het-C-het_not_in_ring
+  SMILES: Cc1cccc(C(O)NC2(C(O)O)Cc3ccc(C(F)(F)F)cc3C2)c1OC(C)C
+
+======================================================================
+Candidate 8  [BRENK ALERT]
+  Oracle pIC50:  6.133  (predicted, r=0.901)
+  Vina score:    -9.89 kcal/mol (simplified receptor)
+  logBB:         +0.062  (predicted BBB permeability)
+  QED:           0.460  (0=least drug-like, 1=most)
+  MW=423  LogP=2.98  TPSA=86  HBD=5  HBA=6
+  RotBonds=6  Stereocenters=3
+  LogS(ESOL)=-5.43 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.18
+  Brenk alerts:    het-C-het_not_in_ring
+  SMILES: OC1CCc2ccc(NC(O)NC3CC(CF)(CF)Oc4cc(F)ccc43)cc2N1
+
+======================================================================
+Candidate 9  [BRENK ALERT]
+  Oracle pIC50:  6.240  (predicted, r=0.901)
+  Vina score:    -8.63 kcal/mol (simplified receptor)
+  logBB:         +0.152  (predicted BBB permeability)
+  QED:           0.408  (0=least drug-like, 1=most)
+  MW=466  LogP=4.90  TPSA=45  HBD=2  HBA=4
+  RotBonds=9  Stereocenters=3
+  LogS(ESOL)=-6.71 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.12
+  Brenk alerts:    het-C-het_not_in_ring
+  SMILES: CC(NC(O)C(C)(F)F)c1ccc(CN2CCc3cc(OCC4CC4(F)F)ccc3C2)cc1
+
+======================================================================
+Candidate 10  [BRENK ALERT]
+  Oracle pIC50:  6.187  (predicted, r=0.901)
+  Vina score:    -7.67 kcal/mol (simplified receptor)
+  logBB:         +0.143  (predicted BBB permeability)
+  QED:           0.601  (0=least drug-like, 1=most)
+  MW=406  LogP=2.18  TPSA=67  HBD=2  HBA=6
+  RotBonds=4  Stereocenters=6
+  LogS(ESOL)=-4.95 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.10
+  Brenk alerts:    het-C-het_not_in_ring; isolated_alkene
+  SMILES: COc1ccc2c3c1OC1C(NC(O)c4ccncc4)C=CC4C(C2)N(C)CCC341
+
+======================================================================
+Candidate 11  [BRENK ALERT]
+  Oracle pIC50:  6.447  (predicted, r=0.901)
+  Vina score:    -7.57 kcal/mol (simplified receptor)
+  logBB:         +0.111  (predicted BBB permeability)
+  QED:           0.357  (0=least drug-like, 1=most)
+  MW=444  LogP=4.48  TPSA=68  HBD=2  HBA=5
+  RotBonds=8  Stereocenters=1
+  LogS(ESOL)=-6.37 mol/L  (aqueous solubility estimate)
+  Sim to known BACE1 scaffold: 0.23
+  Brenk alerts:    Aliphatic_long_chain; het-C-het_not_in_ring
+  SMILES: CCC1(C(O)O)CCc2ccc(OCCCOc3ccc(C(F)(F)F)cc3F)cc2O1
+

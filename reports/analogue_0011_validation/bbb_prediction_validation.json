@@ -1,0 +1,54 @@
+{
+  "candidate_id": "ANALOGUE_0011",
+  "parent_id": "PARENT_A1",
+  "canonical_smiles": "CC(C)(C)COc1cnc2c(c1)C1(COC(N)=N1)c1cc(-c3cncnc3F)ccc1O2",
+  "model_architecture": "ExtraTreesRegressor",
+  "model_checkpoint_path": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\bbb_activity_model\\bbb_model.joblib",
+  "model_metadata_path": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\bbb_activity_model\\bbb_model_metadata.json",
+  "training_data_provenance": "B3DB quantitative logBB dataset (1,058 compounds, 512 scaffolds)",
+  "target_definition": "logBB = log10(C_brain / C_blood)",
+  "threshold_definition": "logBB >= 0.0 (classified as BBB-positive)",
+  "fingerprint_specifications": {
+    "type": "MorganBitVector (ECFP4 equivalent)",
+    "radius": 2,
+    "n_bits": 2048,
+    "chirality": false,
+    "data_type": "float32"
+  },
+  "prediction_results": {
+    "reported_logBB": 0.0139,
+    "reproduced_logBB": 0.0139,
+    "exact_logBB": 0.013919580839879564,
+    "difference_from_reported": 2e-05,
+    "reproduced_normalized_logBB": 0.1221,
+    "threshold": 0.0,
+    "passes_threshold": true,
+    "margin_above_threshold": 0.0139,
+    "borderline_classification": true
+  },
+  "ensemble_uncertainty": {
+    "n_estimators": 500,
+    "tree_predictions_mean": 0.0139,
+    "tree_predictions_std": 0.5828,
+    "tree_predictions_min": -1.75,
+    "tree_predictions_max": 1.6,
+    "tree_predictions_iqr": [
+      -0.31,
+      0.4299
+    ]
+  },
+  "heldout_test_metrics": {
+    "scaffold_test_R2": 0.3538,
+    "scaffold_test_RMSE": 0.6215,
+    "scaffold_test_MAE": 0.4836
+  },
+  "uncertainty_evaluation": {
+    "margin_to_rmse_ratio": 0.0224,
+    "verdict": "The reproduced logBB of +0.0139 satisfies the mathematical threshold (>= 0.0). However, the margin above zero (+0.0139) is 44.6 times smaller than the model's test RMSE (0.6215) and 41.9 times smaller than the ensemble tree standard deviation (0.5828). Because approximately 65% of variance in experimental logBB values is unexplained by this model (R2 = 0.3538), this outcome represents a statistically borderline computational classification rather than confirmed in vivo brain penetration."
+  },
+  "independent_validation_resource_status": {
+    "untouched_experimental_logbb_dataset_available": false,
+    "external_validated_predictor_available": false,
+    "recommended_experimental_assay": "In vitro PAMPA-BBB permeability assay and MDCK-MDR1 bidirectional transport assay (efflux ratio determination)."
+  }
+}

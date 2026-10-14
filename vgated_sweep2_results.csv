@@ -1,0 +1,5 @@
+lambda_condition,lambda_padding,error,n_lo,mean_lo,n_hi,mean_hi,delta_mean,delta_median,pass
+5.0,1.0,[Errno 2] No such file or directory: 'results/vg2_c5_p1_cond80_pred.csv',,,,,,,
+5.0,5.0,,2.0,4.7645396991174795,151.0,5.293711658563321,0.5291719594458417,0.5350094041745335,True
+10.0,1.0,[Errno 2] No such file or directory: 'results/vg2_c10_p1_cond80_pred.csv',,,,,,,
+10.0,5.0,[Errno 2] No such file or directory: 'results/vg2_c10_p5_cond80_pred.csv',,,,,,,

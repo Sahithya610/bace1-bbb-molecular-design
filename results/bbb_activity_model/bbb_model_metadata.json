@@ -1,0 +1,30 @@
+{
+  "target": "logBB",
+  "dataset": "B3DB quantitative logBB",
+  "fingerprint": {
+    "type": "Morgan",
+    "radius": 2,
+    "n_bits": 2048
+  },
+  "random_state": 42,
+  "n_estimators": 500,
+  "max_features": "sqrt",
+  "min_samples_leaf": 2,
+  "molecules": 1058,
+  "scaffolds": 512,
+  "train_samples": 742,
+  "validation_samples": 177,
+  "test_samples": 139,
+  "validation_results": {
+    "MAE": 0.35503776419797706,
+    "RMSE": 0.4738547622713986,
+    "R2": 0.3430316802102473
+  },
+  "test_results": {
+    "MAE": 0.48359386370356994,
+    "RMSE": 0.6214774830214328,
+    "R2": 0.3538051783535119
+  },
+  "B3DB_logBB_mean": -0.077873,
+  "B3DB_logBB_std": 0.751623
+}

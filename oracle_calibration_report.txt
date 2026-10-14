@@ -1,0 +1,13 @@
+========================================================================
+ORACLE CALIBRATION REPORT
+========================================================================
+
+[A] BACE1 ground-truth pIC50 distribution (n=8272)
+    μ=6.677  σ=1.304  min=1.43  max=12.00
+    p10=4.93  p25=5.74  med=6.80  p75=7.66  p90=8.29
+    Fraction ≥6.0: 69.2%  ≥7.0: 44.4%  ≥8.0: 15.9%
+
+[B] Running predict_joint on bace1_continuous_bbb.csv …
+    Done.
+
+[C] Oracle prediction quality (n=8272 matched)

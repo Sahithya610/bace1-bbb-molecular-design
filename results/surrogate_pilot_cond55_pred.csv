@@ -1,0 +1,5 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+466,4,82,CCCCCCCCCCCCCCCCCCC(C)C,True,45,0,BACE1,5.5,0.0,experiments/models/Issue3-SurrogateLoss-Pilot100/joint_generator.pt,42,CCCCCCCCCCCCCCCCCCC(C)C,5.032501914987137,0.2914891164404893,0.49141939035991355
+661,6,21,CCCCCCC(C)(C)c1ccc(C2CCCCC2)cc1,True,45,0,BACE1,5.5,0.0,experiments/models/Issue3-SurrogateLoss-Pilot100/joint_generator.pt,42,CCCCCCC(C)(C)c1ccc(C2CCCCC2)cc1,5.29241895507684,0.5758951376338387,0.869808584401806
+939,8,43,c1ccc(CCCCCc2ccccc2)cc1,True,45,0,BACE1,5.5,0.0,experiments/models/Issue3-SurrogateLoss-Pilot100/joint_generator.pt,42,c1ccc(CCCCCc2ccccc2)cc1,4.984345647835148,0.20488756156599439,0.3761999853197605
+978,8,82,CCCCCCC(C)(C)c1ccc(-c2ccccc2)cc1,True,45,0,BACE1,5.5,0.0,experiments/models/Issue3-SurrogateLoss-Pilot100/joint_generator.pt,42,CCCCCCC(C)(C)c1ccc(-c2ccccc2)cc1,5.102062479918499,0.28864610027747856,0.48763688747880063

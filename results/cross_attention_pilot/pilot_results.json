@@ -1,0 +1,11 @@
+{
+  "valid_frac_55": 0.564453125,
+  "valid_frac_80": 0.0,
+  "n_lo_nontrivial": 578,
+  "n_hi_nontrivial": 0,
+  "mean_oracle_55": 5.407107533862414,
+  "mean_oracle_80": null,
+  "delta_pic50": null,
+  "pass": false,
+  "conclusion": "FAIL: Cross-attention pilot did not pass stopping criteria. pIC50=8.0 condition produced 0 non-trivial valid molecules / 1024 (ValidFrac=0.000, need >= 0.50). The same validity collapse observed with lambda_condition=5 in prior runs persists with cross-attention: the architecture change improved internal head correlation (0.364 -> 0.477) but did not prevent saturation at high pIC50 requests. Cross-attention alone is insufficient to resolve the conditioning failure."
+}

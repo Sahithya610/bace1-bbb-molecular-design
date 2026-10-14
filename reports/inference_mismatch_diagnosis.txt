@@ -1,0 +1,127 @@
+==============================================================================
+ISSUE 5 — PHASE A: INFERENCE-MISMATCH DIAGNOSIS
+==============================================================================
+Work dir : C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master
+Python   : C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\.venv\Scripts\python.exe
+Device   : cuda
+Batch    : 16 (fixed ChEMBL input, identical for every path)
+
+DATASET / ENCODING CONTRACT
+------------------------------------------------------------------------------
+vertexes (max atoms)  : 45
+m_dim (atom classes)   : 14   atom_decoder = {0: 0, 1: 1, 2: 5, 3: 6, 4: 7, 5: 8, 6: 9, 7: 14, 8: 15, 9: 16, 10: 17, 11: 34, 12: 35, 13: 53}
+b_dim (bond classes)   : 5   bond_decoder = {0: rdkit.Chem.rdchem.BondType(21), 1: rdkit.Chem.rdchem.BondType(1), 2: rdkit.Chem.rdchem.BondType(2), 3: rdkit.Chem.rdchem.BondType(3), 4: rdkit.Chem.rdchem.BondType(12)}
+ChEMBL graphs          : 1,418,299
+joint-positive graphs  : 187
+
+FIXED GENERATOR INPUT (z_e, z_n) — IDENTICAL for every path
+------------------------------------------------------------------------------
+z_e (edge input) shape : (16, 45, 45, 5)  == [B, V, V, b_dim] one-hot adjacency
+z_n (node input) shape : (16, 45, 14)  == [B, V, m_dim] one-hot atoms
+z_e dtype=torch.float32  z_n dtype=torch.float32
+z_e min/max=0.0000/1.0000  z_n min/max=0.0000/1.0000
+
+CONDITION VECTORS (the contract difference under test)
+------------------------------------------------------------------------------
+TRAINING  condition (train_joint_positive_disc.py Option A) : [0.0, 0.0, 0.0]
+PRODUCTION condition (generate_joint_molecules.make_condition): [1.0, 1.0000053644180298, 0.1036064624786377]
+  -> desired_pIC50=8.0 -> norm_pIC50=1.000005
+  -> desired_logBB=0.0 -> norm_logBB=0.103606
+L2 distance between the two condition vectors = 1.418007
+The condition is injected TWICE in ConditionalGenerator.forward():
+  (1) before the Transformer via self.condition_layers, and
+  (2) before the categorical readout via self.readout_condition.
+
+CHECKPOINTS (loaded READ-ONLY; never overwritten)
+------------------------------------------------------------------------------
+Issue5 pilot (collapsed, step 450, fine-tuned w/ ZERO cond):
+  C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\experiments\models\Issue5-JointPositiveDisc-Pilot\generator_pilot.pt
+Issue3 warm-start (conditional model trained w/ REAL cond):
+  C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\experiments\models\Issue3-ChemistryReadout\joint_generator.pt
+
+--- ISSUE5-PILOT: generator_pilot.pt ---
+  loaded (missing=0, unexpected=0, strict=False); training=False -> set eval()
+  TRAIN-cond[0,0,0]:
+    node_logits (16, 45, 14) mean=-0.177 std=0.690 absmax=2.88
+    edge_logits (16, 45, 45, 5) mean=-0.108 std=2.045 absmax=3.92
+    PAD fraction (argmax class 0) = 24.306%
+    top atom classes (argmax): c3=421, c0=175, c5=43, c4=42, c10=34, c6=5
+    TRAIN-decode valid: 0/16 = 0.000%
+    PROD-decode  valid: 0/16 = 0.000%
+  PROD-cond[1,1,0.1]:
+    node_logits (16, 45, 14) mean=-0.027 std=0.905 absmax=3.40
+    edge_logits (16, 45, 45, 5) mean=-0.005 std=1.753 absmax=3.50
+    PAD fraction (argmax class 0) = 27.361%
+    top atom classes (argmax): c3=356, c0=197, c5=135, c4=31, c6=1
+    TRAIN-decode valid: 0/16 = 0.000%
+    PROD-decode  valid: 0/16 = 0.000%
+
+--- ISSUE3-WARMSTART: joint_generator.pt ---
+  loaded (missing=0, unexpected=0, strict=False); training=False -> set eval()
+  TRAIN-cond[0,0,0]:
+    node_logits (16, 45, 14) mean=+0.003 std=0.372 absmax=1.04
+    edge_logits (16, 45, 45, 5) mean=+0.143 std=0.520 absmax=1.21
+    PAD fraction (argmax class 0) = 28.889%
+    top atom classes (argmax): c9=300, c0=208, c10=201, c6=11
+    TRAIN-decode valid: 3/16 = 18.750%
+    PROD-decode  valid: 3/16 = 18.750%
+    PROD examples: ['Cl', 'SSS']
+  PROD-cond[1,1,0.1]:
+    node_logits (16, 45, 14) mean=+0.070 std=0.235 absmax=1.06
+    edge_logits (16, 45, 45, 5) mean=+0.200 std=0.401 absmax=1.52
+    PAD fraction (argmax class 0) = 27.778%
+    top atom classes (argmax): c3=377, c0=200, c6=51, c4=51, c5=37, c9=4
+    TRAIN-decode valid: 6/16 = 37.500%
+    PROD-decode  valid: 6/16 = 37.500%
+    PROD examples: ['CC1CCCC1c1ccc(O)cc1', 'CN(CCCN1C(O)CSC1c1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1)CC1CC1']
+
+INFERENCE-CONTRACT COMPARISON (structural facts from the source)
+------------------------------------------------------------------------------
+aspect                       training path              production path
+generator input z_e          ChEMBL adj one-hot         ChEMBL adj one-hot (SAME)
+generator input z_n          ChEMBL atom one-hot        ChEMBL atom one-hot (SAME)
+condition vector             [0,0,0] (Option A)         [1.0,~1.0,~0.1] (DIFFER)
+eval mode                    model.eval()               model.eval() (SAME)
+sampling                     argmax (deterministic)     argmax (deterministic, SAME)
+atom/bond decoder dicts      from chembl+bace1          from chembl+bace1 (SAME)
+matrices2mol strict          strict=True                strict=False (lenient)
+post-decode                  MolToSmiles only           Sanitize + largest fragment (lenient)
+m_dim / b_dim / vertexes     14 / 5 / 45                14 / 5 / 45 (SAME)
+
+ISOLATING THE CONDITION EFFECT (same checkpoint, same decode, only condition changes)
+------------------------------------------------------------------------------
+checkpoint           decode         TRAIN-cond valid   PROD-cond valid    delta (PROD-TRAIN)
+ISSUE5-PILOT         train_decode   0.000%             0.000%             +0.000%
+ISSUE5-PILOT         prod_decode    0.000%             0.000%             +0.000%
+ISSUE3-WARMSTART     train_decode   18.750%            37.500%            +18.750%
+ISSUE3-WARMSTART     prod_decode    18.750%            37.500%            +18.750%
+
+CROSS-CHECKPOINT UNDER PRODUCTION CONDITION [1.0,~1.0,~0.1]
+------------------------------------------------------------------------------
+(shows whether the production pipeline produces valid molecules when
+ the condition MATCHES the checkpoint's training distribution)
+checkpoint             trained-with cond      PROD-cond valid
+ISSUE3-WARMSTART       REAL cond (BACE1=1)    37.500%
+ISSUE5-PILOT           ZERO cond [0,0,0]      0.000%
+
+VERDICT
+------------------------------------------------------------------------------
+The generator INPUT (z_e, z_n), the atom/bond encoder-decoder dicts,
+the graph dimensions (m_dim=14, b_dim=5, V=45), eval mode, and the
+deterministic argmax sampling are IDENTICAL between the two paths.
+The production decoder is STRICTLY MORE LENIENT than the training
+decoder (strict=False + sanitize + largest-fragment), so decoding
+cannot explain production being MORE invalid.
+
+The ONLY substantive contract difference is the CONDITION VECTOR:
+the Issue-5 pilot generator was fine-tuned EXCLUSIVELY with the zero
+condition [0,0,0] (Option A), but generate_joint_molecules.py feeds
+the non-zero condition [1.0, ~1.0, ~0.1036]. Because the condition is
+injected twice in ConditionalGenerator (before the Transformer and
+before the categorical readout), this out-of-distribution condition
+shifts the node/edge logits away from the valid-graph manifold.
+
+
+CAUSE_IDENTIFIED: yes
+ROOT_CAUSE: The Issue-5 pilot ConditionalGenerator was fine-tuned exclusively with the all-zeros condition vector [0,0,0] (train_joint_positive_disc.py Option A, lambda_condition=0.0), but generate_joint_molecules.py feeds it the non-zero production condition [1.0, normalized_pIC50, normalized_logBB] (=[1.0, ~1.0, ~0.1036] for the defaults pIC50=8.0/logBB=0.0). Every other generator-input contract is identical between the two paths (z_e and z_n are ChEMBL one-hot graphs, m_dim=14/b_dim=5/V=45, eval mode, deterministic argmax, identical atom/bond decoder dicts), and the production decoder is actually more lenient than the training decoder. Because ConditionalGenerator.forward() injects the condition at TWO points — once before the Transformer via condition_layers and again before the categorical readout via readout_condition — the out-of-distribution non-zero condition displaces the node/edge logits off the valid-graph manifold that the zero-condition fine-tuning had stabilized, yielding near-zero validity at inference while the in-distribution zero-condition eval during training stayed 90-100% through step 300.
+FIX: In the generation/inference path, feed the generator the SAME condition the checkpoint was trained with: for the Issue-5 pilot checkpoint (trained under Option A with lambda_condition=0.0) pass the all-zeros condition torch.zeros(batch_size, 3) instead of the non-zero make_condition() vector. Concretely, make the condition vector in generate_joint_molecules.py configurable (e.g. a --condition_mode {zero,conditional} flag, or an explicit --condition vector) and default it to zeros for checkpoints that were fine-tuned under Option A; verify the checkpoint provenance in run_config.json before choosing. No change to the model architecture, the decoder, or the training script is required, and the baseline/collapsed checkpoints must remain untouched.

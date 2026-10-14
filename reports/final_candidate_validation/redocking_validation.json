@@ -1,0 +1,46 @@
+{
+  "reference_ligand": {
+    "ligand_id": "3BN",
+    "chemical_name": "N-{(1S,2R)-1-(cyclohexylmethyl)-3-[cyclopropyl(methyl)amino]-2-hydroxypropyl}-3-{[methyl(methylsulfonyl)amino]methyl}benzamide analogue",
+    "source_pdb": "2B8V",
+    "heavy_atoms_count": 38,
+    "hydrogen_preparation": "Added explicit coordinates using RDKit Chem.AddHs(mol, addCoords=True)",
+    "pdbqt_conversion": "Meeko MoleculePreparation v0.8.0"
+  },
+  "validation_threshold": {
+    "metric": "Heavy-atom Root Mean Square Deviation (RMSD)",
+    "passing_criterion": "RMSD < 2.0 Angstroms against crystallographic coordinates",
+    "mapping_method": "Atom-name matched pairing across all 38 crystallographic heavy atoms"
+  },
+  "previous_failure_diagnosis": {
+    "reported_meeko_failure": "Previous script passed mol with implicit hydrogens to Meeko, triggering: RDKit molecule has implicit Hs. Need explicit Hs.",
+    "reported_naive_rmsd": "Earlier unmapped naive index calculation gave 6.119 A because Meeko reordered graph atom indices relative to the crystal PDB.",
+    "corrected_outcome": "Adding explicit 3D hydrogens and mapping coordinates by atom name resolved both issues completely."
+  },
+  "redocking_results_by_protonation_state": {
+    "state_1_deprot": {
+      "receptor_variant": "bace1_receptor.pdbqt",
+      "top_vina_score_kcal_mol": -8.65,
+      "heavy_atom_rmsd_A": 1.33,
+      "mapped_atoms": "38 / 38",
+      "validation_status": "PASS (1.330 A < 2.0 A)",
+      "mode_2_rmsd_A": 1.873,
+      "mode_3_rmsd_A": 5.016
+    },
+    "state_2_ash32": {
+      "receptor_variant": "bace1_receptor_ash32.pdbqt",
+      "top_vina_score_kcal_mol": -8.61,
+      "heavy_atom_rmsd_A": 1.572,
+      "mapped_atoms": "38 / 38",
+      "validation_status": "PASS (1.572 A < 2.0 A)"
+    },
+    "state_3_ash228": {
+      "receptor_variant": "bace1_receptor_ash228.pdbqt",
+      "top_vina_score_kcal_mol": -8.58,
+      "heavy_atom_rmsd_A": 1.589,
+      "mapped_atoms": "38 / 38",
+      "validation_status": "PASS (1.589 A < 2.0 A)"
+    }
+  },
+  "overall_docking_validation_verdict": "VALIDATED \u2014 The protocol reliably reproduces the co-crystallized binding pose with heavy-atom RMSD <= 1.59 A across all three protonation setups."
+}

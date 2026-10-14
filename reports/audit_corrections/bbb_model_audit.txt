@@ -1,0 +1,209 @@
+BBB MODEL AUDIT
+Phase 3B -- DrugGEN BACE1 Audit
+Generated: Phase 3 workflow
+======================================================================
+
+==============================================================
+SECTION 1: BBB MODEL METADATA
+==============================================================
+
+Source file: results/bbb_activity_model/bbb_model_metadata.json
+
+  target              : logBB
+  dataset             : B3DB quantitative logBB
+  fingerprint         : Morgan, radius=2, nBits=2048
+  random_state        : 42
+  n_estimators        : 500
+  max_features        : sqrt
+  min_samples_leaf    : 2
+
+  Total molecules     : 1,058
+  Total scaffolds     : 512
+  Train samples       : 742
+  Validation samples  : 177
+  Test samples        : 139
+
+  Validation results:
+    MAE  = 0.355
+    RMSE = 0.474
+    R²   = 0.343
+
+  Test results (scaffold-split held-out):
+    MAE  = 0.484
+    RMSE = 0.621
+    R²   = 0.354
+
+  B3DB logBB distribution:
+    mean = -0.078
+    std  = 0.752
+
+Model file present: results/bbb_activity_model/bbb_model.joblib  (16 MB)
+Test predictions file: NOT FOUND (no separate test predictions CSV in
+  results/bbb_activity_model/).
+
+==============================================================
+SECTION 2: logBB DATA SOURCE
+==============================================================
+
+File: druggen_data/bace1_continuous_bbb.csv
+Column: predicted_logBB   (NOT experimental_logBB)
+
+The column name 'predicted_logBB' makes it clear that logBB values
+in the filtered BACE1 training and generation data are MODEL PREDICTIONS,
+not experimentally measured logBB values.
+
+Provenance chain:
+  1. B3DB_regression.tsv contains experimental logBB values for 1,058
+     molecules (B3DB quantitative subset). These were measured across
+     literature sources and are genuine experimental data.
+  2. An ExtraTrees regression model (bbb_model.joblib) was trained on
+     these B3DB experimental logBB values using Morgan fingerprints.
+     This model achieves test R²=0.354, RMSE=0.621.
+  3. The trained BBB regression model was applied to BACE1 molecules
+     (which are NOT in B3DB) to produce predicted_logBB values.
+  4. The predicted_logBB values in bace1_continuous_bbb.csv are therefore
+     PREDICTIONS-OF-PREDICTIONS relative to the generated candidates:
+     a BBB regression model predicts logBB for BACE1 training molecules,
+     and those predictions were used as conditioning or filtering criteria.
+
+B3DB experimental logBB range (from B3DB_regression.tsv sample):
+  logBB values include: -2.52, -2.15, -2.09, -1.88 ... (spanning
+  roughly -3 to +1 based on published B3DB dataset characteristics).
+
+bace1_continuous_bbb.csv predicted_logBB sample values:
+  -0.237, -0.237, -0.267, -0.267 (first four rows)
+  These values are tightly clustered near zero (near the B3DB mean of
+  -0.078), consistent with predictions from a moderate-accuracy model
+  that regresses toward the mean. They are NOT experimental values.
+
+==============================================================
+SECTION 3: SCAFFOLD-SPLIT HELD-OUT TEST FOR BBB MODEL
+==============================================================
+
+Answer: YES. A scaffold-split held-out test was performed.
+
+Evidence from bbb_model_metadata.json:
+  - total molecules  : 1,058
+  - total scaffolds  : 512
+  - train / val / test split by scaffold
+  - test_samples     : 139
+  - test R²          : 0.354  (confirmed: expected R²=0.354 per audit spec)
+  - test RMSE        : 0.621
+  - test MAE         : 0.484
+
+The test set of 139 molecules was held out by scaffold, so no scaffold
+seen at training time appears in the test set. This is the appropriate
+split type for evaluating generalization to novel chemical series.
+
+Caveat: BACE1 molecules used for generation have entirely different
+scaffolds from B3DB. The generalization of the BBB model to BACE1-like
+structures is NOT covered by this test. The effective accuracy of
+predicted_logBB for BACE1-derived candidates may be substantially
+lower than R²=0.354.
+
+==============================================================
+SECTION 4: IDENTIFIED GAPS
+==============================================================
+
+GAP 1: No test prediction file saved
+  The BBB model directory contains only bbb_model.joblib and
+  bbb_model_metadata.json. No CSV with test-set predictions,
+  residuals, or molecule-level metrics is present. This prevents
+  independent verification of the reported test R²=0.354.
+
+GAP 2: Applicability domain not assessed
+  The BBB model was trained exclusively on B3DB molecules, which are
+  predominantly small CNS drugs and probe compounds. BACE1 inhibitors
+  are structurally distinct (larger, more lipophilic, peptidomimetic
+  scaffolds). No applicability domain analysis (e.g., Tanimoto
+  distance to B3DB training set) has been performed for the BACE1
+  molecules receiving BBB predictions.
+
+GAP 3: Prediction uncertainty not propagated
+  The bace1_continuous_bbb.csv uses a point estimate (predicted_logBB)
+  without uncertainty bounds. Given RMSE=0.621 on the test set, the
+  true logBB could plausibly range ±1.2 log units for any given
+  prediction, which spans a large fraction of the BBB+/BBB- boundary
+  (typically logBB > -1.0 for BBB-permeable).
+
+GAP 4: Filtering threshold basis not documented
+  The 'bbb_condition' and 'normalized_predicted_logBB' columns in
+  bace1_continuous_bbb.csv imply a threshold was applied to select
+  BBB-permeable candidates, but the rationale for the specific
+  threshold value is not documented in the available files.
+
+GAP 5: Column naming could mislead
+  The column name 'predicted_logBB' is accurate, but downstream
+  consumers of this data could mistake it for experimental logBB
+  without reading the metadata. Any report should explicitly state
+  that these are model predictions, not experimental measurements.
+
+==============================================================
+SECTION 5: VERDICT
+==============================================================
+
+The BBB filtering in the DrugGEN BACE1 pipeline is based on a
+properly trained regression model (ExtraTrees, scaffold-split,
+n_train=742, n_test=139) applied to B3DB experimental logBB data.
+The model achieves test R²=0.354, which is modest but within the
+range reported for logBB prediction in the literature.
+
+Key points for any publication or report:
+  1. ALWAYS state that BBB permeability scores are model predictions,
+     not experimental measurements.
+  2. Report test R²=0.354 as the benchmark for BBB model accuracy.
+     Do NOT imply that BBB predictions are experimental or highly
+     accurate.
+  3. Acknowledge the applicability domain gap: the model was trained
+     on B3DB molecules; BACE1 inhibitor scaffolds are largely outside
+     the training domain.
+  4. The conjunction of oracle pIC50 prediction (R²=0.6156) and BBB
+     prediction (R²=0.354) means the joint uncertainty is substantial.
+     Top candidates should be clearly labeled as 'computationally
+     predicted' requiring experimental validation for both activity
+     and BBB penetration.
+
+======================================================================
+
+==============================================================
+APPENDIX: PHASE 3 COMPLETION SUMMARY
+==============================================================
+
+Phase 3 tasks completed:
+
+3A -- Oracle Model Training Coverage
+  Output: reports/audit_corrections/oracle_training_coverage.txt
+  Key findings:
+    - Training set: 8,271 molecules, pIC50 range 1.432-12.000
+    - 44.4% have pIC50 >= 7.0 (potent); 15.9% have pIC50 >= 8.0
+    - Test accuracy: R²=0.6156, RMSE=0.7553, MAE=0.5879 (n=1,240)
+    - Training Pearson r (~0.901) is in-sample only, NOT external accuracy
+    - RMSE=0.755 is a typical error, NOT a calibrated 95% CI
+
+3B -- BBB Model Audit
+  Output: reports/audit_corrections/bbb_model_audit.txt  (this file)
+  Key findings:
+    - BBB model trained on B3DB experimental logBB (n=1,058 molecules)
+    - Scaffold-split test: 139 molecules, R²=0.354, RMSE=0.621
+    - predicted_logBB in bace1_continuous_bbb.csv are model predictions,
+      NOT experimental values
+    - Applicability domain for BACE1 scaffolds is unverified
+    - No test prediction CSV available for independent verification
+
+3C -- Novelty Analysis for Top 200
+  Script: compute_novelty_top200.py
+  Output: reports/audit_corrections/novelty_analysis_top200.csv
+          (existing file preserved; summary confirmed by re-run)
+  Key findings (verified by script):
+    - Total analyzed: 200 candidates
+    - Unique Murcko scaffolds: 186 / 200  [VERIFIED, matches claim]
+    - Mean pairwise Tanimoto (ECFP4, r=2): 0.146  [VERIFIED, matches claim]
+    - Exact training duplicates (Tc >= 0.999): 3
+    - Mean max training Tc: 0.3039
+
+  Novelty claims are substantiated: 186/200 unique scaffolds and
+  mean pairwise Tc=0.146 both match the values reported in the
+  original pipeline output.
+
+======================================================================
+END OF BBB MODEL AUDIT / PHASE 3 COMPLETION REPORT

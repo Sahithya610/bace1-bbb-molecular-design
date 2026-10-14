@@ -1,0 +1,12 @@
+REDOCKING VALIDATION — Phase 4B
+======================================================================
+
+Crystal ligand 3BN extracted: 38 HETATM atoms
+Written to: docking/ligand_3BN_crystal.pdb
+
+Ligand preparation FAILED: 
+Traceback (most recent call last):
+  File "<string>", line 15, in <module>
+    setups = prep.prepare(mol)
+  File "C:\Users\CSE-SDPL\Desktop\124ad0055\DrugGEN-master\.venv\Lib\site-packages\meeko\prepa
+Redocking could not be attempted.

@@ -1,0 +1,12 @@
+{
+  "checkpoint": "experiments/models/Issue3-ChemistryReadout/joint_generator.pt",
+  "requested_pIC50": 7.0,
+  "requested_logBB": 0.0,
+  "batch_size": 128,
+  "num_batches": 391,
+  "total_target_graphs": 50048,
+  "seed": 42,
+  "output_generated": "results/baseline_screen_50000_generated.csv",
+  "output_predictions": "results/baseline_screen_50000_predictions.csv",
+  "note": "Seed 42 matches the 16k run seed for comparability, but this is NOT an exact replay of that run because num_batches differs (391 vs 128). The DataLoader iterates the ChEMBL dataset sequentially without shuffle, so additional batches access new positions in the dataset rather than replaying earlier ones."
+}

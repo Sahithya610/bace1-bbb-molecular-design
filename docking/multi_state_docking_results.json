@@ -1,0 +1,47 @@
+{
+  "redocking_validation": {
+    "deprot": {
+      "receptor_variant": "bace1_receptor",
+      "vina_score": -8.65,
+      "heavy_atom_rmsd": 1.33,
+      "mapped_heavy_atoms": 38,
+      "validation_passed": true
+    },
+    "ash32": {
+      "receptor_variant": "bace1_receptor_ash32",
+      "vina_score": -8.614,
+      "heavy_atom_rmsd": 1.572,
+      "mapped_heavy_atoms": 38,
+      "validation_passed": true
+    },
+    "ash228": {
+      "receptor_variant": "bace1_receptor_ash228",
+      "vina_score": -8.577,
+      "heavy_atom_rmsd": 1.589,
+      "mapped_heavy_atoms": 38,
+      "validation_passed": true
+    }
+  },
+  "candidate_scores": {
+    "Candidate_1308": {
+      "deprot": -8.008,
+      "ash32": -8.02,
+      "ash228": -8.037
+    },
+    "Candidate_1902": {
+      "deprot": -9.05,
+      "ash32": -9.082,
+      "ash228": -9.076
+    },
+    "ANALOGUE_0011": {
+      "deprot": -7.512,
+      "ash32": -7.522,
+      "ash228": -7.455
+    },
+    "Candidate_3": {
+      "deprot": -7.207,
+      "ash32": -7.222,
+      "ash228": -7.199
+    }
+  }
+}

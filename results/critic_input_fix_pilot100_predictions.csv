@@ -1,0 +1,5 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+1,1,1,C,True,45,0,BACE1,8.0,0.0,experiments/models/Issue3-CriticInputFix-Pilot100/joint_generator.pt,42,C,4.771837412411537,0.17766052368894947,0.3399756575955624
+2,1,2,C#P,True,45,0,BACE1,8.0,0.0,experiments/models/Issue3-CriticInputFix-Pilot100/joint_generator.pt,42,C#P,4.877918678980766,0.14286918217578332,0.29368737009881724
+11,1,11,P,True,45,0,BACE1,8.0,0.0,experiments/models/Issue3-CriticInputFix-Pilot100/joint_generator.pt,42,P,4.779658767691358,0.2754776559428833,0.47011687500633065
+12,1,12,P#P,True,45,0,BACE1,8.0,0.0,experiments/models/Issue3-CriticInputFix-Pilot100/joint_generator.pt,42,P#P,4.853533569801901,0.13989240234447065,0.289726900779341

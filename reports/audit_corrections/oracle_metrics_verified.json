@@ -1,0 +1,51 @@
+{
+  "model_type": "ExtraTrees",
+  "split_method": "scaffold_split",
+  "test_n": 1240,
+  "test_r2": 0.6156080678355416,
+  "test_rmse": 0.7553398502362197,
+  "test_mae": 0.5879442585742135,
+  "test_pearson_r": null,
+  "test_spearman_rho": null,
+  "training_pearson_note": "The training-set Pearson r (~0.901) reflects in-sample fit only. It MUST NOT be reported as external or test-set accuracy. External (test-set) accuracy should be reported as R\u00b2=0.6156, RMSE=0.7553, MAE=0.5879 (n=1240 held-out test compounds).",
+  "scaffold_overlap_found": false,
+  "pic50_definition": "9 - log10(IC50[nM])",
+  "pic50_definition_consistent": true,
+  "pic50_training_range": [
+    1.431798275933005,
+    12.0
+  ],
+  "ic50_equivalent_range_nM": [
+    0.001,
+    37000000.0
+  ],
+  "duplicate_check_result": "no duplicate canonical_smiles in training table",
+  "metadata_checks": {
+    "test_n_confirmed": true,
+    "r2_confirmed": true,
+    "rmse_confirmed": true,
+    "mae_confirmed": true
+  },
+  "data_quality_notes": [
+    "Scaffold counts are consistent with disjoint scaffold splits (train+val+test scaffold counts sum to <= unique_scaffolds total)",
+    "No saved test prediction file found; Pearson r and Spearman rho on test set are NOT computable from available files"
+  ],
+  "training_set_stats": {
+    "n_training": 8271,
+    "fraction_pic50_ge_7_0": 0.443719,
+    "n_pic50_ge_7_0": 3670,
+    "fraction_pic50_ge_threshold": 0.247975,
+    "n_pic50_ge_threshold": 2051,
+    "threshold_used": 7.6576,
+    "n_in_70_to_90_range": 3511,
+    "pic50_mean": 6.677128,
+    "pic50_std": 1.304231,
+    "pic50_median": 6.79588
+  },
+  "explicit_caveats": [
+    "RMSE=0.755 is a typical error statistic (RMS deviation), NOT a calibrated 95% prediction interval. Do NOT report as +/-0.755 at 95% CI.",
+    "Generated molecules may be outside the training distribution; applicability domain is unverified for generated structures.",
+    "Do NOT claim +/-1.5 pIC50 as a calibrated confidence interval unless conformal prediction or bootstrap calibration has been performed.",
+    "Training-set Pearson r (~0.901) reflects in-sample fit only. External accuracy = R2=0.6156, RMSE=0.7553, MAE=0.5879 (n=1240 scaffold-split test)."
+  ]
+}

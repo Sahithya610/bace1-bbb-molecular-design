@@ -1,0 +1,66 @@
+ORACLE MODEL TRAINING COVERAGE ANALYSIS
+Phase 3A -- DrugGEN BACE1 Audit
+Generated: Phase 3 workflow
+======================================================================
+
+SOURCE FILE
+  results/bace1_activity_model/bace1_activity_training_table.csv
+  Columns: canonical_smiles, pIC50, scaffold
+
+TRAINING SET SIZE
+  Total molecules (rows): 8,271
+  Valid pIC50 values:      8,271 (no missing values)
+  pIC50 definition: 9 - log10(IC50[nM])   (from model_metadata.json)
+
+pIC50 DESCRIPTIVE STATISTICS
+  Minimum: 1.432
+  Maximum: 12.000
+  Mean:     6.677
+  Median:   6.796
+
+pIC50 COVERAGE THRESHOLDS
+  pIC50 >= 7.0  (potent, IC50 <= 10 nM):        3,670 / 8,271 = 44.4%
+  pIC50 >= 8.0  (highly potent, IC50 <= 1 nM):  1,313 / 8,271 = 15.9%
+  pIC50 in [7.0, 9.0] (core target zone):       3,511 / 8,271 = 42.4%
+
+CONFIRMED EXTERNAL (TEST-SET) ACCURACY
+  The model was evaluated on a scaffold-split held-out test set (n=1,240).
+  Test R²   = 0.6156
+  Test RMSE = 0.7553
+  Test MAE  = 0.5879
+  Model type: ExtraTrees (selected over RandomForest on validation set)
+
+ACCURACY REPORTING CONSTRAINTS
+  The training-set Pearson r (~0.901) is an IN-SAMPLE fit metric.
+  It MUST NOT be reported as external or test-set accuracy.
+  External accuracy is: R²=0.6156, RMSE=0.7553, MAE=0.5879 (n=1,240).
+
+PREDICTION ERROR
+  Typical prediction error should be reported as RMSE=0.755 pIC50 units.
+  This is NOT a calibrated 95% confidence interval.
+  A naive ±2×RMSE = ±1.51 pIC50 units would give a ~95% empirical range
+  only if residuals are approximately normal, which has not been verified.
+  Reports MUST describe RMSE as a typical (root-mean-square) error, not as
+  a confidence interval unless formal calibration has been performed.
+
+APPLICABILITY DOMAIN NOTES
+  - 44.4% of training molecules have pIC50 >= 7.0; the top-200 candidates
+    all have predicted_pIC50 >= 7.0, placing them near the upper end of
+    the training distribution.
+  - 15.9% of training molecules have pIC50 >= 8.0; predictions in this
+    range carry higher uncertainty due to sparser training data.
+  - Generated molecules with novel scaffolds (see Phase 3C) may fall
+    outside the oracle's applicability domain; predictions for these
+    should be treated with additional caution.
+  - No saved test prediction file was found; Pearson r and Spearman rho
+    on the test set are NOT computable from available files.
+
+SCAFFOLD STATISTICS (from model_metadata.json)
+  Unique scaffolds total: 2,925
+  Train scaffolds:  2,082
+  Val scaffolds:      404
+  Test scaffolds:     439
+  (Scaffold counts are consistent with disjoint scaffold splits.)
+
+======================================================================
+END OF ORACLE TRAINING COVERAGE REPORT

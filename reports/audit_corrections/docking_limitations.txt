@@ -1,0 +1,50 @@
+DOCKING LIMITATIONS — Phase 4C
+======================================================================
+
+STANDARD DOCKING LIMITATIONS NOTE
+(To be included verbatim in any publication or report)
+
+The molecular docking in this study used AutoDock Vina v1.2.7 with a
+simplified receptor PDBQT preparation. The following limitations apply:
+
+1. RECEPTOR PREPARATION
+   The receptor PDBQT was generated using an in-house atom-type lookup
+   table rather than a full Gasteiger/MMFF charge computation (e.g., via
+   MGLTools AutoDockTools or Schrodinger Protein Preparation Wizard).
+   Partial charges are approximate and may affect scoring accuracy.
+
+2. PROTONATION STATE
+   The catalytic dyad of BACE1 (Asp32 and Asp228) was not explicitly
+   protonated. The protonation state of the aspartate dyad is critical
+   for BACE1 binding and varies depending on ligand type (hydroxyethylene
+   isosteres vs. aminothiazines require different protonation). The default
+   deprotonated state used here may reduce scoring accuracy for some
+   scaffold types.
+
+3. WATERS AND COFACTORS
+   All crystallographic water molecules and cofactors were removed. Key
+   structural waters (e.g., the flap water in BACE1) can mediate important
+   ligand contacts and their omission may affect pose prediction.
+
+4. VINA SCORING FUNCTION
+   Vina scores are outputs of an empirical scoring function, NOT measured
+   binding free energies. They should not be compared to experimental IC50,
+   Ki, or binding free energy (dG) values without appropriate calibration.
+
+5. COMPARABILITY
+   Vina scores from this study (using the simplified receptor) should NOT
+   be directly compared to literature Vina scores from properly prepared
+   receptors. Scores are valid for relative ranking within this study only.
+
+6. BEST PRACTICE RECOMMENDATION
+   For publication-quality docking, receptor preparation should use:
+   - H++ or HTMD for protonation state assignment
+   - AutoDockTools/MGLTools or Schrodinger Protein Prep Wizard for charges
+   - Validated redocking of co-crystallized ligand (RMSD < 2.0 A criterion)
+   These tools require additional installation and are not currently
+   available in this environment.
+
+SUMMARY
+Docking results in this study are preliminary computational evidence for
+relative activity ranking. They do not constitute confirmed binding
+measurements. All candidates require experimental validation.

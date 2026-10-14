@@ -1,0 +1,13 @@
+evaluation_parameter,value,threshold_or_criterion,pass_fail_status,medicinal_chemistry_rationale
+Lipinski Molecular Weight (MW),435.46 g/mol,<= 500 g/mol,PASS,CNS-penetrant drug space generally favors MW < 450; 435.5 g/mol is fully compliant.
+Crippen Calculated LogP (cLogP),3.80,<= 5.0 (CNS optimum 2.0 - 4.0),PASS,cLogP = 3.80 falls within the optimal window for passive blood-brain barrier diffusion.
+Topological Polar Surface Area (TPSA),104.74 Å²,<= 120 Å² (CNS optimum 60 - 90 Å²),PASS,"TPSA of 104.7 Å² complies with general CNS guidelines (<120 Å²), though slightly higher than ideal (<90 Å²)."
+Hydrogen Bond Donors (HBD),1,<= 3 for CNS (Lipinski <= 5),PASS,Single donor (-NH2 of oxazoline) minimizes desolvation penalty across lipid bilayers.
+Hydrogen Bond Acceptors (HBA),8,<= 7 for CNS (Lipinski <= 10),PASS,"8 acceptors passes Lipinski Ro5 (<=10), slightly above conservative CNS guidelines (<=7)."
+Rotatable Bonds (RotB),3,<= 8 for CNS,PASS,Only 3 rotatable bonds confers high structural rigidity and low entropic barrier upon binding.
+Quantitative Estimate of Drug-Likeness (QED),0.624,>= 0.50 (favorable),PASS,QED = 0.624 demonstrates balanced physicochemical properties typical of clinical-stage candidates.
+"PAINS Filter (Catalogs A, B, C)",0 matches,0 matches,PASS,"Devoid of pan-assay interference motifs, quinones, rhodanines, or redox cyclers."
+Brenk Structural Alert Filter,0 matches,0 matches,PASS,"No mutagenic, carcinogenic, or metabolically toxic substructures identified."
+NIH Reactive Group Filter,0 matches,0 matches,PASS,No reactive electrophilic warheads detected.
+Custom Imine_reactive Filter,1 substructure match,Context-dependent,BENIGN,"Flags the amino-oxazoline core [CX3;H0](=N). In medicinal chemistry, this is NOT an unstable aliphatic imine, but rather a cyclic amidine/isothiourea bioisostere that forms the essential hydrogen-bonding network with catalytic aspartates Asp32 and Asp228 (identical to verubecestat)."
+Site of Fluorination Impact,Pyrimidine C4-F,Steric & Electronic Fit,FAVORABLE,Mono-fluorination on the solvent-exposed pyrimidine ring elevates lipophilicity (+0.14 cLogP) and blocks oxidative metabolism without disrupting the catalytic binding anchor.

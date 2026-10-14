@@ -1,0 +1,6 @@
+sample_id,source_batch,source_sample_in_batch,smiles,valid,decoded_atom_count_before_component_filter,oxygen_count_before_component_filter,target,condition_mode,requested_pIC50,requested_logBB,checkpoint,seed,canonical_smiles,predicted_pIC50,predicted_logBB,normalized_predicted_logBB
+481,4,97,C=C=C=C=C=C=C=C=C=C=C,True,45,0,BACE1,zero,7.0,0.0,experiments\models\Issue5-JointPositive-Checkpointed\generator_step_400.pt,42,C=C=C=C=C=C=C=C=C=C=C,4.916785189044947,0.20280144799284508,0.37342450669131344
+558,5,46,C=C=C=C=C=C=C=C=C=C=C=C=C=C=C=C=N,True,38,0,BACE1,zero,7.0,0.0,experiments\models\Issue5-JointPositive-Checkpointed\generator_step_400.pt,42,C=C=C=C=C=C=C=C=C=C=C=C=C=C=C=C=N,4.921444437493319,0.19233151186529068,0.3594947358786129
+617,5,105,C=C=C=C=C=C,True,45,0,BACE1,zero,7.0,0.0,experiments\models\Issue5-JointPositive-Checkpointed\generator_step_400.pt,42,C=C=C=C=C=C,4.912350196513011,0.20608144791953134,0.37778839646941526
+791,7,23,C=C=C=C=C=C=C,True,45,0,BACE1,zero,7.0,0.0,experiments\models\Issue5-JointPositive-Checkpointed\generator_step_400.pt,42,C=C=C=C=C=C=C,4.916785189044947,0.20280144799284508,0.37342450669131344
+924,8,28,F,True,8,0,BACE1,zero,7.0,0.0,experiments\models\Issue5-JointPositive-Checkpointed\generator_step_400.pt,42,F,4.757241985823418,0.26921474232868814,0.46178435509382776

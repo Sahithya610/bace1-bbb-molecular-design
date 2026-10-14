@@ -1,0 +1,20 @@
+{
+  "architecture": "MLP 2048->512->256->128->1",
+  "n_bits": 2048,
+  "radius": 2,
+  "dropout": 0.2,
+  "output": "normalized_pIC50",
+  "pIC50_mean": 6.691315,
+  "pIC50_std": 1.308678,
+  "unique_molecules": 8271,
+  "train_samples": 5789,
+  "validation_samples": 1242,
+  "test_samples": 1240,
+  "epochs": 200,
+  "batch_size": 256,
+  "lr": 0.001,
+  "test_r2": 0.6059566140174866,
+  "test_mae": 0.5604941248893738,
+  "extratrees_baseline_r2": 0.6156,
+  "extratrees_baseline_mae": 0.5879
+}

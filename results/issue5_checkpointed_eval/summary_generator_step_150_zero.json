@@ -1,0 +1,46 @@
+{
+  "checkpoint": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\experiments\\models\\Issue5-JointPositive-Checkpointed\\generator_step_150.pt",
+  "checkpoint_name": "generator_step_150.pt",
+  "condition_mode": "zero",
+  "seed": 42,
+  "sample": {
+    "requested_graphs": 1024,
+    "generated_graphs": 1024,
+    "valid_molecules": 975,
+    "validity_fraction": 0.952148,
+    "unique_canonical_smiles": 973,
+    "duplicate_count": 2,
+    "uniqueness_fraction": 0.997949
+  },
+  "similarity_to_joint_positive_train": {
+    "max_tanimoto": 0.1867,
+    "mean_tanimoto": 0.108,
+    "count_tc_ge_09": 0,
+    "fraction_tc_ge_09": 0.0,
+    "count_tc_ge_04": 0
+  },
+  "oracle_predictions": {
+    "evaluated_count": 973,
+    "pic50_stats": {
+      "mean": 5.384080456139112,
+      "median": 5.379631605422035,
+      "min": 4.602627042650315,
+      "max": 5.944973887087437
+    },
+    "logbb_stats": {
+      "mean": 0.30182616471184787,
+      "median": 0.2805661297596798,
+      "min": -0.257910930461022,
+      "max": 0.7220601504858695
+    },
+    "threshold_pic50_ge_7_6576_count": 0,
+    "threshold_logbb_ge_0_count": 921,
+    "threshold_both_jointly_count": 0,
+    "joint_molecules": []
+  },
+  "files": {
+    "generated_csv": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\issue5_checkpointed_eval\\generated_generator_step_150_zero.csv",
+    "predictions_csv": "C:\\Users\\CSE-SDPL\\Desktop\\124ad0055\\DrugGEN-master\\results\\issue5_checkpointed_eval\\predictions_generator_step_150_zero.csv"
+  },
+  "elapsed_seconds": 18.12
+}
